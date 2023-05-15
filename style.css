@@ -360,7 +360,7 @@ img.slideUp {
   position: relative;
   float: left;
   left: 0;
-  top: 620px;
+  top: 35vw;
   transition: all 250ms linear;
 }
 
