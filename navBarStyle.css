@@ -304,7 +304,7 @@ h1.nameTitle {
 
 
 .logo {
-  position: absolute;
+
   top: 30px;
   left: 20px;
   display: block;
@@ -320,6 +320,17 @@ h1.nameTitle {
 
 
 
+img.slideUp {
+  width: 25%;
+  height: 65%;
+  border-radius: 120px;
+  position: relative;
+  float: left;
+  left: 0;
+  top: 35vw;
+  transition: all 250ms linear;
+}
+
 @media screen and (max-width: 991px) {
 
   .menu-icon:checked+label,
@@ -327,9 +338,6 @@ h1.nameTitle {
     right: 55px;
   }
 
-  .logo {
-    left: 30px;
-  }
 
   .nav {
     right: 30px;
@@ -342,17 +350,18 @@ h1.nameTitle {
   }
 
   .nav ul li a {
-    font-size: 8vh;
+    font-size: 5vh;
   }
-}
 
-img.slideUp {
-  width: 25%;
-  height: 65%;
-  border-radius: 120px;
-  position: relative;
-  float: left;
-  left: 0;
-  top: 35vw;
-  transition: all 250ms linear;
+  .logo img {
+
+    top: 120px;
+    right: 22px;
+    display: block;
+    padding: 0;
+    margin: 0;
+    z-index: 9;
+  }
+
+
 }

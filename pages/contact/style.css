@@ -1,7 +1,7 @@
 h1.nameTitle {
 
-    margin-left: 0px;
-    margin-right: 0px;
+    margin: 15px 0px 0px 0px;
+    padding: 0px;
     text-align: center;
 
 }
@@ -12,8 +12,8 @@ h1.nameTitle {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
-    margin-left: 45%;
-    margin-top: 15%;
+
+    text-align: center;
 
 
 }
@@ -136,4 +136,23 @@ h1.nameTitle {
 
 .card4:hover .discord {
     fill: white;
+}
+
+
+
+@media screen and (max-width: 991px) {
+    h1.nameTitle {
+
+
+        text-align: center;
+
+    }
+
+    
+    .main {
+
+     
+        margin-left: 27vw;
+        margin-top: 50vw;
+    }
 }
