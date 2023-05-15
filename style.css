@@ -49,9 +49,7 @@ h1 {
   color: #ffeba7;
   text-align: center;
   -webkit-text-stroke: 2px #ffeba7;
-  text-stroke: 2px #ffeba7;
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
   color: transparent;
 }
 
@@ -311,17 +309,17 @@ h1 {
 
 .logo {
   position: absolute;
-  top: 60px;
-  left: 50px;
+  top: 30px;
+  left: 20px;
   display: block;
   z-index: 11;
   transition: all 250ms linear;
 }
 
 .logo img {
-  height: 26px;
-  width: auto;
+  width: 100px;
   display: block;
+  border-radius: 9999px;
 }
 
 
