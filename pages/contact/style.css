@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 h1.nameTitle {
 
     margin: 15px 0px 0px 0px;
@@ -12,8 +16,9 @@ h1.nameTitle {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
-
     text-align: center;
+    margin-left: 45vw;
+    margin-top: 15vh;
 
 
 }
@@ -148,10 +153,10 @@ h1.nameTitle {
 
     }
 
-    
+
     .main {
 
-     
+
         margin-left: 27vw;
         margin-top: 50vw;
     }
