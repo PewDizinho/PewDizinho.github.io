@@ -1,3 +1,9 @@
+body {
+  padding: 0px;
+  margin: 0px;
+
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 body {
@@ -42,10 +48,15 @@ h1 {
 }
 
 h1.nameTitle {
+
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  text-align: center;
+
   z-index: -2;
-  margin-left: 30%;
+
   margin-top: 10%;
-  text-shadow: inset 4px 4px #1f2029;
+ 
   opacity: 0.75;
 }
 
@@ -304,15 +315,17 @@ h1.nameTitle {
 
 
 .logo {
-
+  position: relative;
   top: 30px;
   left: 20px;
   display: block;
+  width: fit-content;
   z-index: 11;
-  transition: all 250ms linear;
+  transition: all 450ms linear;
 }
 
 .logo img {
+
   width: 100px;
   display: block;
   border-radius: 9999px;
@@ -327,8 +340,8 @@ img.slideUp {
   position: relative;
   float: left;
   left: 0;
-  top: 35vw;
-  transition: all 250ms linear;
+  top: 32vw;
+  transition: all 450ms linear;
 }
 
 @media screen and (max-width: 991px) {
@@ -354,8 +367,7 @@ img.slideUp {
   }
 
   .logo img {
-
-    top: 120px;
+    top: 220px;
     right: 22px;
     display: block;
     padding: 0;
