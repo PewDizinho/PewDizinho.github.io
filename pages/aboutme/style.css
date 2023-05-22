@@ -29,3 +29,23 @@ div.infoMeio {
     padding-top: 25px;
 
 }
+
+
+
+@media screen and (max-width: 1000px) {
+
+    h1.nameTitle:not(.subtitle) {
+        margin-top: 80px;
+
+    }
+
+    div.infoMeio {
+        margin-top: 50px;
+    }
+
+    p {
+        margin-left: 3%;
+        margin-right: 3%;
+        font-size: 15px;
+    }
+}
