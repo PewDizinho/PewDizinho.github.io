@@ -1,0 +1,26 @@
+p {
+    top: 0;
+    word-wrap: break-word;
+    margin-left: 8%;
+    margin-right: 8%;
+    overflow: initial;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: clamp(0.6em, 4.5vw, 1.2em);
+    line-height: 1;
+    color: #ffeba7;
+    text-align: justify;
+}
+
+h1.nameTitle {
+    margin-top: 5px;
+
+}
+
+div.infoMeio {
+    margin-top: 100px;
+    background-color: rgba(2, 0, 46, 0.373);
+    padding-bottom: 15px;
+    padding-top: 15px;
+
+}

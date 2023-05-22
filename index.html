@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="img/png"
-        href="https://raw.githubusercontent.com/PewDizinho/PewDizinho.github.io/main/assets/PewRound.png">
+        href="./assets/PewRound.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="navBarStyle.css">
     <link rel="stylesheet" href="style.css">
@@ -15,7 +15,7 @@
 <body>
 
     <a href="./pages/PewDizinho/index.html" class="logo">
-        <img src="https://raw.githubusercontent.com/PewDizinho/PewDizinho.github.io/main/assets/Pew.png" alt="">
+        <img src="./assets/Pew.png" alt="">
     </a>
 
     <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon" />
@@ -24,19 +24,19 @@
     <nav class="nav">
         <ul class="pt-5">
             <li><a href="./index.html">Home</a></li>
-            <li><a href="#">Sobre Mim</a></li>
+            <li><a href="./pages/aboutme/index.html">Sobre Mim</a></li>
             <li><a href="#">Meu Trabalho</a></li>
             <li><a href="./pages/contact/index.html">Contato</a></li>
         </ul>
     </nav>
 
-    <img id="leftMe" class="leftMe"
-        src="https://github.com/PewDizinho/PewDizinho.github.io/blob/main/assets/PauloEduard-1.png?raw=true" alt="">
+    <img id="leftMe" class="img-fluid img-thumbnail leftMe"
+        src="./assets/PauloEduard-1.png" alt="">
 
     <h1 class="nameTitle">Paulo Eduardo <br>Konopka</h1>
     <div class="infoMeio">
 
-        <p class="bio" id="home">
+        <p class="bio text-break" id="home">
 
 
 
@@ -74,14 +74,14 @@
     <script>
         if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
 
-            window.onscroll = function () {
-                if (document.documentElement.scrollTop > 130) {
-                    document.getElementById("leftMe").className = "slideUp";
-                } else {
-                    document.getElementById("leftMe").className = "leftMe";
-                }
+            // window.onscroll = function () {
+                // if (document.documentElement.scrollTop > 130) {
+                    // document.getElementById("leftMe").className = "slideUp";
+                // } else {
+                    // document.getElementById("leftMe").className = "leftMe";
+                // }
 
-            };
+            // };
         }
 
     </script>
