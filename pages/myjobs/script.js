@@ -37,13 +37,14 @@ for (let myCard of cards) {
     cardTitle.textContent = myCard.title;
     cardText.textContent = myCard.description;
     cardImg.src = myCard.imgUrl;
-    cardButton.innerText = "Ver Mais";
+    cardButton.innerText = "Veja Mais";
 
     card.classList.add('card');
     card.style = `width: 17rem; background-color: ${myCard.backgroundColor}; color: white; margin: 5px`;
     spacer.style = "flex: 1;";
     cardImg.classList.add('card-img-top');
     cardImg.style = `background-color: ${myCard.imgBackgroundColor}; height: 200px; object-fit: cover;`;
+    cardTitle.style = "margin-top:8px";
 
     cardBody.classList.add('card-body', 'd-flex', 'flex-column', 'align-items-center'); // Added classes for flex layout
     cardTitle.classList.add('card-title');
@@ -51,6 +52,18 @@ for (let myCard of cards) {
     cardText.classList.add('text-center');
     cardButton.classList.add('btn', 'btn-primary');
 
+    cardButton.addEventListener('click', function () {
+        // Pass data to the new HTML file
+        var titleParam = encodeURIComponent(myCard.title);
+        var descriptionParam = encodeURIComponent(myCard.description);
+        var imgUrlParam = encodeURIComponent(myCard.imgUrl);
+
+        // Construct the URL with the parameters
+        var url = 'newpage.html?title=' + titleParam + '&description=' + descriptionParam + '&imgUrl=' + imgUrlParam;
+
+        // Navigate to the new HTML file
+        window.location.href = url;
+    });
     cardBody.appendChild(cardImg);
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(cardText);

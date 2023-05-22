@@ -32,10 +32,19 @@
     </nav>
 
     <h1 class="nameTitle text-center text-break">『Meus Trabalhos』</h1>
-    <div class="row center" id="myDiv">
-    </div>
 
-    <script src="./script.js"></script>
+    <script>
+        // Retrieve the URL parameters
+        var urlParams = new URLSearchParams(window.location.search);
+        var title = urlParams.get('title');
+        var description = urlParams.get('description');
+        var imgUrl = urlParams.get('imgUrl');
+
+        // Use the data as needed
+        document.getElementById('title').textContent = title;
+        document.getElementById('description').textContent = description;
+        document.getElementById('image').src = imgUrl;
+    </script>
 </body>
 
 </html>
