@@ -9,5 +9,20 @@
  }
 
  img {
-    width: 550px;
+     width: 550px;
+ }
+
+
+ @media screen and (max-width: 1000px) {
+
+     img {
+         width: auto;
+         height: auto;
+     }
+
+     .mb {
+         display: flex;
+         flex-direction: column;
+     }
+
  }
