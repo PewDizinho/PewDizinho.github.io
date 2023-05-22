@@ -17,7 +17,7 @@ const cards = [
         imgBackgroundColor: "rgb(17, 34, 17)",
         backgroundColor: "#262626",
         site: {
-            longerDescription: "Liderei o \"Grupo 1\" para a realização desse site, que até a data de hoje, continua algo WIP,",
+            longerDescription: "Liderei o \"Grupo 1\" para a realização desse site, que até a data de hoje, continua algo WIP",
             link: "https://PewDizinho.github.io/PI1"
         }
     }, {
