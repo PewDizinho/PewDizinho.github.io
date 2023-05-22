@@ -74,14 +74,14 @@
     <script>
         if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
 
-            // window.onscroll = function () {
-                // if (document.documentElement.scrollTop > 130) {
-                    // document.getElementById("leftMe").className = "slideUp";
-                // } else {
-                    // document.getElementById("leftMe").className = "leftMe";
-                // }
+            window.onscroll = function () {
+                if (document.documentElement.scrollTop > 130) {
+                    document.getElementById("leftMe").className = "slideUp";
+                } else {
+                    document.getElementById("leftMe").className = "leftMe";
+                }
 
-            // };
+            };
         }
 
     </script>
