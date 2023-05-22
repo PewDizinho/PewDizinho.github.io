@@ -1,0 +1,13 @@
+ p {
+     height: fit-content;
+
+ }
+
+ div.row {
+     margin: auto;
+     height: fit-content;
+ }
+
+ img {
+    width: 550px;
+ }

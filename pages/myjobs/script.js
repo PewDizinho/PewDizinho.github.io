@@ -4,20 +4,32 @@ const cards = [
         description: "Uma loja que usei como mediadora para meu trabalho de freelancer",
         imgUrl: "../../assets/PewsCavernIcon.png",
         imgBackgroundColor: "#ffff80",
-        backgroundColor: "#262626"
+        backgroundColor: "#262626",
+        site: {
+            longerDescription: "Pew's Cavern foi fundada em 2019, sendo o lugar onde eu realizava vendas diversas, foi um lugar muito importante para o meu desenvolvimento como programador e profissional",
+            link: "https://discord.gg/tvdDHwC"
+        }
     },
     {
         title: "Produtos do Futuro",
         description: "O Produtos do Futuro é o Projeto Integrador da faculdade, obrigatório para a conclusão do ensino superior",
         imgUrl: "https://raw.githubusercontent.com/PewDizinho/PI1/main/assets/icon.png",
         imgBackgroundColor: "rgb(17, 34, 17)",
-        backgroundColor: "#262626"
+        backgroundColor: "#262626",
+        site: {
+            longerDescription: "Liderei o \"Grupo 1\" para a realização desse site, que até a data de hoje, continua algo WIP,",
+            link: "https://PewDizinho.github.io/PI1"
+        }
     }, {
         title: "SchoolApp",
         description: "SchoolApp foi um projeto mobile que eu fiz durante alguns meses",
         imgUrl: "../../assets/SchoolAppIcon.png",
         imgBackgroundColor: "#00ffff",
-        backgroundColor: "#262626"
+        backgroundColor: "#262626",
+        site: {
+            longerDescription: "Um aplicativo que ajudaria estudantes a se organizar com datas e notas de uma maneira simplificada",
+            link: "https://youtu.be/SBDACF9arCw"
+        }
     },
 ];
 
@@ -50,16 +62,23 @@ for (let myCard of cards) {
     cardTitle.classList.add('card-title');
     cardText.classList.add('card-text');
     cardText.classList.add('text-center');
-    cardButton.classList.add('btn', 'btn-primary');
+    cardButton.classList.add('btn', 'btn-outline-primary');
 
     cardButton.addEventListener('click', function () {
-        // Pass data to the new HTML file
-        var titleParam = encodeURIComponent(myCard.title);
-        var descriptionParam = encodeURIComponent(myCard.description);
-        var imgUrlParam = encodeURIComponent(myCard.imgUrl);
 
-        // Construct the URL with the parameters
-        var url = 'https://pewdizinho.github.io/pages/myjobs/jobInfo.html?title=' + titleParam + '&description=' + descriptionParam + '&imgUrl=' + imgUrlParam;
+
+
+
+        var url = 'http://PewDizinho.github.io/pages/myjobs/jobInfo.html?title='
+            + encodeURIComponent(myCard.title)
+            + '&description='
+            + encodeURIComponent(myCard.description)
+            + '&imgUrl='
+            + encodeURIComponent(myCard.imgUrl)
+            + '&longerDescription='
+            + encodeURIComponent(myCard.site.longerDescription)
+            + '&url='
+            + encodeURIComponent(myCard.site.link);
 
         // Navigate to the new HTML file
         window.location.href = url;

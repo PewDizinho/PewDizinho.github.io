@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../navBarStyle.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styleInfo.css">
     <title>PewDizinho (BETA)</title>
 </head>
 
@@ -26,26 +27,50 @@
         <ul class="pt-5">
             <li><a href="../../index.html">Home</a></li>
             <li><a href="../aboutme/index.html">Sobre Mim</a></li>
-            <li><a href="#">Meu Trabalho</a></li>
+            <li><a href="./index.html">Meu Trabalho</a></li>
             <li><a href="../../pages/contact/index.html">Contato</a></li>
         </ul>
     </nav>
 
-    <h1 class="nameTitle text-center text-break">『Meus Trabalhos』</h1>
-    <p id="title"></p>
-    <p id="description"></p>
-    <img src="" alt="" id="image">
+    <h1 class="nameTitle text-center text-break" id="title"></h1>
+    <div class="center align-middle text-center">
+
+        <img src="" alt="" id="image">
+        <div class="row center">
+            <p id="description"></p>
+            <p id="longerDescription"></p>
+        </div>
+    </div>
+
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center column">
+
+        <button onclick="location.href='https://pewdizinho.github.io/pages/myjobs/index.html'" type="button" class="btn btn-outline-secondary btn-lg">◀︎ Voltar</button>
+        <button id="seemore" type="button" class="btn btn-outline-primary btn-lg">🔗Veja mais</button>
+    </div>
     <script>
         // Retrieve the URL parameters
         var urlParams = new URLSearchParams(window.location.search);
         var title = urlParams.get('title');
         var description = urlParams.get('description');
         var imgUrl = urlParams.get('imgUrl');
+        var longerDescription = urlParams.get('longerDescription');
+        var url = urlParams.get('url');
+
 
         // Use the data as needed
-        document.getElementById('title').textContent = title;
-        document.getElementById('description').textContent = description;
+        document.getElementById('title').textContent = `『${title}』`;
         document.getElementById('image').src = imgUrl;
+        document.getElementById('description').textContent = description;
+        document.getElementById('longerDescription').textContent = longerDescription;
+
+        document.getElementById("seemore").addEventListener('click', function () {
+
+            window.open(url, '_blank').focus();
+        });
+
+
+
     </script>
 </body>
 
