@@ -47,30 +47,18 @@
 
         <button id="seemore" type="button" class="btn btn-outline-primary btn-lg">🔗Veja mais</button>
         <button onclick="location.href='https://pewdizinho.github.io/pages/myjobs/index.html'" type="button"
-        class="btn btn-outline-secondary btn-lg">◀︎ Voltar</button>
+            class="btn btn-outline-secondary btn-lg">◀︎ Voltar</button>
     </div>
     <script>
-        // Retrieve the URL parameters
-        var urlParams = new URLSearchParams(window.location.search);
-        var title = urlParams.get('title');
-        var description = urlParams.get('description');
-        var imgUrl = urlParams.get('imgUrl');
-        var longerDescription = urlParams.get('longerDescription');
-        var url = urlParams.get('url');
 
-
-        // Use the data as needed
-        document.getElementById('title').textContent = `『${title}』`;
-        document.getElementById('image').src = imgUrl;
-        document.getElementById('description').textContent = description;
-        document.getElementById('longerDescription').textContent = longerDescription;
-
+        let urlParams = new URLSearchParams(window.location.search);
+        document.getElementById('title').textContent = `『${urlParams.get('title')}』`;
+        document.getElementById('image').src = urlParams.get('imgUrl');
+        document.getElementById('description').textContent = urlParams.get('description');
+        document.getElementById('longerDescription').textContent = urlParams.get('longerDescription');
         document.getElementById("seemore").addEventListener('click', function () {
-
-            window.open(url, '_blank').focus();
+            window.open(urlParams.get('url'), '_blank').focus();
         });
-
-
 
     </script>
 </body>

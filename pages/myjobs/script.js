@@ -65,11 +65,7 @@ for (let myCard of cards) {
     cardButton.classList.add('btn', 'btn-outline-primary');
 
     cardButton.addEventListener('click', function () {
-
-
-
-
-        var url = 'http://PewDizinho.github.io/pages/myjobs/jobInfo.html?title='
+        window.location.href = 'http://PewDizinho.github.io/pages/myjobs/jobInfo.html?title='
             + encodeURIComponent(myCard.title)
             + '&description='
             + encodeURIComponent(myCard.description)
@@ -79,9 +75,6 @@ for (let myCard of cards) {
             + encodeURIComponent(myCard.site.longerDescription)
             + '&url='
             + encodeURIComponent(myCard.site.link);
-
-        // Navigate to the new HTML file
-        window.location.href = url;
     });
     cardBody.appendChild(cardImg);
     cardBody.appendChild(cardTitle);
