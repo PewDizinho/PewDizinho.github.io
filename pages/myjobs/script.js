@@ -1,4 +1,5 @@
 const cards = [
+
     {
         title: "Pew's Cavern",
         description: "Uma loja que usei como mediadora para meu trabalho de freelancer",
@@ -31,6 +32,51 @@ const cards = [
             link: "https://youtu.be/SBDACF9arCw"
         }
     },
+    {
+        title: "Pixel Bot",
+        description: "A Pixel foi um projeto que utilizei NodeJs junto com a API do DiscordJs para criar um bot para realizar vendas",
+        imgUrl: "../../assets/PixelIcon.png",
+        imgBackgroundColor: "#0059b3",
+        backgroundColor: "#262626",
+        site: {
+            longerDescription: "Um bot de discord que vendedores poderiam se aplicar como vendedores e realizar anúncios de seus serviços relacionados a minecraft, o bot também utilizava um sistema integrado ao MercadoPago para realização de transações e verificação de pagamento via Pix",
+            link: "https://www.youtube.com/watch?v=LgA7vtoYWZE&list=PLqA3MEVjb0lUd-WYDKAIVymnB2vJjsNhJ"
+        }
+    },
+    {
+        title: "Script de Status",
+        description: "Um sistema de atributos via script para minecraft na versão 1.12.2, recriando sistemas de força e vida do jogo",
+        imgUrl: "../../assets/OldPewsCavern.png",
+        imgBackgroundColor: "#0059b3",
+        backgroundColor: "#262626",
+        site: {
+            longerDescription: "Esse script foi uma tentativa de recriação do sistema de atributos do mod \"Dragon Block C\", utilizando a até então nova função de Custom GUIs do CustomNPC, por motivos de limtações de salvamento de data pela API, o projeto não foi concluído",
+            link: "https://www.youtube.com/watch?v=Ozy7Qz7N7eE&list=PLqA3MEVjb0lVxMvrbmXtQebX20L8bEJ0V"
+        }
+    },
+    {
+        title: "Scripts CustomNPC 1.7.10",
+        description: "Uma coletânea dos meus códigos da versão mais antiga do minecraft, sendo meus primeiros projetos de programação",
+        imgUrl: "../../assets/OldPewsCavern.png",
+        imgBackgroundColor: "#0059b3",
+        backgroundColor: "#262626",
+        site: {
+            longerDescription: "Scripts feitos na 1.7.10, usando a versão padrão do Custom NPC",
+            link: "https://www.youtube.com/watch?v=Bpa06AVjaSE&list=PLqA3MEVjb0lUupLdDz8r2Hr2t2DP-oCTD"
+        }
+    },
+    {
+        title: "Scripts CustomNPC 1.12.2",
+        description: "Códigos realizados na versão mais atual do CustomNPC, 1.12.2",
+        imgUrl: "../../assets/OldPewsCavern.png",
+        imgBackgroundColor: "#0059b3",
+        backgroundColor: "#262626",
+        site: {
+            longerDescription: "Scripts feitos na 1.12.2, algumas coisas mais complexas",
+            link: "https://www.youtube.com/watch?v=sS-QgfqRD4w&list=PLqA3MEVjb0lVqSyTTikJuh5lGLbgNMaED&index=4"
+        }
+    },
+
 ];
 
 
@@ -60,6 +106,8 @@ for (let myCard of cards) {
 
     cardBody.classList.add('card-body', 'd-flex', 'flex-column', 'align-items-center'); // Added classes for flex layout
     cardTitle.classList.add('card-title');
+    cardTitle.classList.add('text-center');
+
     cardText.classList.add('card-text');
     cardText.classList.add('text-center');
     cardButton.classList.add('btn', 'btn-outline-primary');
