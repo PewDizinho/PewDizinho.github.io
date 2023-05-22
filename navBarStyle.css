@@ -41,7 +41,7 @@ h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   font-size: 7vw;
-  line-height: 1;
+    line-height: 1.3;
   color: #ffeba7;
   text-align: center;
 
@@ -339,7 +339,7 @@ img.slideUp {
   border-radius: 120px;
   position: relative;
   float: left;
-  left: 0;
+  left: 15px;
   top: 32vw;
   transition: all 450ms linear;
 }
