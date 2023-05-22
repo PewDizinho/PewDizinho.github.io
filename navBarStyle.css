@@ -52,11 +52,7 @@ h1.nameTitle {
   margin: 0px 0px 0px 0px;
   padding: 0px;
   text-align: center;
-
   z-index: -2;
-
-  margin-top: 10%;
- 
   opacity: 0.75;
 }
 
@@ -316,7 +312,7 @@ h1.nameTitle {
 
 .logo {
   position: relative;
-  top: 30px;
+  top: 15px;
   left: 20px;
   display: block;
   width: fit-content;
@@ -340,7 +336,7 @@ img.slideUp {
   position: relative;
   float: left;
   left: 15px;
-  top: 32vw;
+  top: 25vw;
   transition: all 450ms linear;
 }
 
