@@ -59,7 +59,7 @@ for (let myCard of cards) {
         var imgUrlParam = encodeURIComponent(myCard.imgUrl);
 
         // Construct the URL with the parameters
-        var url = 'newpage.html?title=' + titleParam + '&description=' + descriptionParam + '&imgUrl=' + imgUrlParam;
+        var url = 'https://pewdizinho.github.io/pages/myjobs/jobInfo.html?title=' + titleParam + '&description=' + descriptionParam + '&imgUrl=' + imgUrlParam;
 
         // Navigate to the new HTML file
         window.location.href = url;
