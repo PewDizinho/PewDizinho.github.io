@@ -1,15 +1,11 @@
 :root {
-
-
-
-
     --jet: #2d2d2aff;
     --black-olive: #353831ff;
     --black-olive-2: #38423bff;
     --feldgrau: #8cbbb4;
     --feldgrau-2: #b6dbd5;
     --spring-green: #20fc8fff;
-
+    /* https://coolors.co/2d2d2a-353831-38423b-648e88-20fc8f */
     --gradient-top: linear-gradient(0deg, #2d2d2aff, #353831ff, #38423bff, #3f5e5aff, #20fc8fff);
     --gradient-right: linear-gradient(90deg, #2d2d2aff, #353831ff, #38423bff, #3f5e5aff, #20fc8fff);
     --gradient-bottom: linear-gradient(180deg, #2d2d2aff, #353831ff, #38423bff, #3f5e5aff, #20fc8fff);
