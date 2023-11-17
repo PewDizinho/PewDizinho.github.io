@@ -6,15 +6,6 @@
     --feldgrau-2: #b6dbd5;
     --spring-green: #20fc8fff;
     /* https://coolors.co/2d2d2a-353831-38423b-648e88-20fc8f */
-    --gradient-top: linear-gradient(0deg, #2d2d2aff, #353831ff, #38423bff, #3f5e5aff, #20fc8fff);
-    --gradient-right: linear-gradient(90deg, #2d2d2aff, #353831ff, #38423bff, #3f5e5aff, #20fc8fff);
-    --gradient-bottom: linear-gradient(180deg, #2d2d2aff, #353831ff, #38423bff, #3f5e5aff, #20fc8fff);
-    --gradient-left: linear-gradient(270deg, #2d2d2aff, #353831ff, #38423bff, #3f5e5aff, #20fc8fff);
-    --gradient-top-right: linear-gradient(45deg, #2d2d2aff, #353831ff, #38423bff, #3f5e5aff, #20fc8fff);
-    --gradient-bottom-right: linear-gradient(135deg, #2d2d2aff, #353831ff, #38423bff, #3f5e5aff, #20fc8fff);
-    --gradient-top-left: linear-gradient(225deg, #2d2d2aff, #353831ff, #38423bff, #3f5e5aff, #20fc8fff);
-    --gradient-bottom-left: linear-gradient(315deg, #2d2d2aff, #353831ff, #38423bff, #3f5e5aff, #20fc8fff);
-    --gradient-radial: radial-gradient(#2d2d2aff, #353831ff, #38423bff, #3f5e5aff, #20fc8fff);
 
 }
 
@@ -49,6 +40,7 @@ aside {
 
 
 }
+
 p.quote {
     font-size: 1.2rem;
     color: var(--feldgrau-2);
@@ -57,6 +49,7 @@ p.quote {
     margin-bottom: 15px;
 
 }
+
 div.container {
     background-color: var(--black-olive-2);
     width: 100%;
@@ -93,7 +86,7 @@ div.card img {
 
 div.card:hover {
     background-color: var(--black-olive);
-    cursor:default ;
+    cursor: default;
 }
 
 div#leftPart {
@@ -241,4 +234,79 @@ div#countdown * {
 
 #instagram {
     animation: drop 1s ease-out;
+}
+
+
+/* TicTacToe */
+#playground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+
+}
+
+#board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+}
+
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--feldgrau);
+    font-size: 50px;
+}
+
+.cell * {
+    color: var(--spring-green);
+    font-size: 50px;
+    margin: 0px;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#reset {
+    margin-top: 20px;
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+}
+
+
+
+button {
+    background-color: var(--black-olive);
+    color: var(--feldgrau-2);
+    padding: 10px 15px;
+    box-shadow: 0px 0px 5px 0px var(--feldgrau-2);
 }

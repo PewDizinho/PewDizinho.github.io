@@ -355,7 +355,85 @@
 
         <div class="container" id="playground">
             <h1>Playground</h1>
-            <p style="text-align: center;">W.I.P.</p>
+            <div id="playground">
+                <div id="game">
+                    <div id="board">
+                        <div class="row">
+                            <div class="cell" id="cell-0"></div>
+                            <div class="cell" id="cell-1"></div>
+                            <div class="cell" id="cell-2"></div>
+                        </div>
+                        <div class="row">
+                            <div class="cell" id="cell-3"></div>
+                            <div class="cell" id="cell-4"></div>
+                            <div class="cell" id="cell-5"></div>
+                        </div>
+                        <div class="row">
+                            <div class="cell" id="cell-6"></div>
+                            <div class="cell" id="cell-7"></div>
+                            <div class="cell" id="cell-8"></div>
+                        </div>
+                    </div>
+                    <div id="status"></div>
+                    <button id="reset">Reset</button>
+                </div>
+            </div>
+
+            <script>
+                const cells = document.querySelectorAll('.cell');
+                let letter = "X";
+                const reset = () => {
+                    for (var cell of cells) {
+                        cell.innerHTML = "";
+                    }
+                    letter = "X";
+                }
+
+                const checkWinner = () => {
+                    const winningConditions = [
+                        [0, 1, 2],
+                        [3, 4, 5],
+                        [6, 7, 8],
+
+                        [0, 3, 6],
+                        [1, 4, 7],
+                        [2, 5, 8],
+
+                        [0, 4, 8],
+                        [2, 4, 6]
+                    ];
+
+                    for (var i = 0; i < winningConditions.length; i++) {
+                        const [a, b, c] = winningConditions[i];
+                        if (cells[a].innerHTML != "" && cells[a].innerHTML == cells[b].innerHTML && cells[a].innerHTML == cells[c].innerHTML) {
+                            let cleanWinner = cells[a].innerHTML.replace(/p/g, ' ');
+                            cleanWinner = cleanWinner.replace(/</g, ' ');
+                            cleanWinner = cleanWinner.replace(/>/g, ' ');
+                            cleanWinner = cleanWinner.replace(/\//g, '');
+                            document.querySelector('#status').innerHTML = `<p>${cleanWinner} Ganhou!</p>`;
+                            return false;
+                        }
+                    }
+                    return true;
+                }
+
+
+                for (var cell of cells) {
+                    cell.addEventListener('click', cellClicked);
+                }
+
+                function cellClicked(e) {
+                    if (checkWinner()) {
+                        if (e.target.innerHTML != "") return;
+                        e.target.innerHTML = `<p>${letter}</p>`;
+                        letter = letter == "X" ? "O" : "X";
+                        checkWinner(); return;
+                    }
+
+                }
+
+                document.querySelector('#reset').addEventListener('click', reset);
+            </script>
         </div>
     </div>
 
