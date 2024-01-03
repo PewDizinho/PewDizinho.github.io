@@ -61,7 +61,11 @@ div.container {
     align-items: center;
     padding: 30px 40px 30px 34px;
     border-radius: 15px;
+}
+
+div.container:not(#aboutme) {
     display: none;
+
 }
 
 div#workList {
@@ -239,7 +243,8 @@ div#countdown * {
 
 /* TicTacToe */
 #playground {
-    display: flex;
+
+    display: none;
     justify-content: center;
     align-items: center;
     height: 80vh;
