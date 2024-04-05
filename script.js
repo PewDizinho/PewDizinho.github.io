@@ -91,12 +91,12 @@ function navBar(name) {
 }
 
 
-document.getElementById("age").innerHTML = `${((Date.now() - new Date(2004, 6, 4).getTime()) / (1000 * 60 * 60 * 24 * 365.25)).toFixed(0)} anos`;
+document.getElementById("age").innerHTML = `${((Date.now() - new Date(2005, 6, 4).getTime()) / (1000 * 60 * 60 * 24 * 365.25)).toFixed(0)} anos`;
 
 const today = new Date();
 const nextBirthday = new Date(today.getFullYear(), 6, 4);
 if (nextBirthday < today) {
-    nextBirthday.setFullYear(nextBirthday.getFullYear() + 1);
+    nextBirthday.setFullYear(nextBirthday.getFullYear());
 }
 const timeDiff = nextBirthday.getTime() - today.getTime();
 const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
