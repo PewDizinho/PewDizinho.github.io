@@ -1,317 +1,55 @@
-:root {
-    --jet: #2d2d2aff;
-    --black-olive: #353831ff;
-    --black-olive-2: #38423bff;
-    --feldgrau: #8cbbb4;
-    --feldgrau-2: #b6dbd5;
-    --spring-green: #20fc8fff;
-    /* https://coolors.co/2d2d2a-353831-38423b-648e88-20fc8f */
-
+main {
+    display: flex;
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 
 body {
-    font-family: Monospace;
-    display: flex;
-
-    background-color: var(--jet);
-
+    background-image: url('./assets/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 15%;
 }
 
-
-
-aside {
-    width: fit-content;
-    height: fit-content;
+#row {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--black-olive);
-    padding: 30px 40px 30px 34px;
-    border-radius: 15px;
-    margin: 0 auto 15px auto;
-
-
 }
 
-p.quote {
-    font-size: 1.2rem;
-    color: var(--feldgrau-2);
-    text-align: center;
+p:not(title-bar-text) {
     margin: 0px;
-    margin-bottom: 15px;
-
+    margin-top: 15px;
 }
 
-div.container {
-    background-color: var(--black-olive-2);
-    width: 100%;
-    height: fit-content;
-    margin-bottom: 15px;
+.column {
     display: flex;
+    align-items: start;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 40px 30px 34px;
-    border-radius: 15px;
 }
 
-div.container:not(#aboutme) {
-    display: none;
-
+img#buddyLogin {
+    width: 150px;
 }
 
-div#workList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-div.card {
-    background-color: var(--black-olive-2);
-    padding: 15px;
-    border-radius: 15px;
-    text-align: center;
-    justify-content: center;
-
-}
-
-div.card img {
-    height: 150px;
-    object-fit: cover;
-}
-
-div.card:hover {
-    background-color: var(--black-olive);
-    cursor: default;
-}
-
-div#leftPart {
-    margin: 25px;
-    width: 100%;
-}
-
-aside * {
-    margin: 5px 5px;
-
-}
-
-div.info {
-    display: none;
-}
-
-div.nav {
-    background-color: var(--black-olive-2);
-    width: fit-content;
-    height: fit-content;
-    padding: 15px;
-    border-radius: 15px;
+p#forgotPassword {
+    color: #5077CB;
+    margin-left: 10px;
+    font-weight: 600;
     cursor: pointer;
+    font-size: 15px;
 }
 
-
-
-
-main {
-    width: fit-content;
-    height: fit-content;
-    margin: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--black-olive);
-    padding: 40px 30px 40px 30px;
-    border-radius: 15px;
-    top: 15px;
-    position: sticky;
-
-}
-
-main img {
-    border-radius: 100%;
-    aspect-ratio: 6/7;
-    width: 300px;
-    margin-bottom: 15px;
-}
-
-h1,
-h2 {
-    color: var(--spring-green);
-    text-align: center;
-}
-
-p {
-    margin: 10px;
-    font-size: 1.2rem;
-    color: var(--feldgrau);
-
-}
-
-p#title {
-    font-size: 1rem;
+input {
     margin: 0px;
-    font-weight: 300;
-    text-align: center;
-    margin-bottom: 15px;
-}
+    width: 250px;
+    margin-left: 25px;
 
-div#social svg {
-    aspect-ratio: 1/1;
-    width: 70px;
-    cursor: pointer;
-    color: var(--black-olive-2);
-
-}
-
-g:hover,
-path:hover {
-
-    fill: black;
-
-}
-
-
-@keyframes drop {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-
-    50% {
-        transform: translateY(0px);
-    }
-
-    75% {
-        transform: translateY(-20px);
-    }
-
-    90% {
-        transform: translateY(0px);
-    }
-
-    95% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-div#countdown * {
-    color: var(--spring-green);
-}
-
-#age {
-    cursor: help;
-}
-
-#age:hover::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    margin-top: 25px;
-    transform: translateX(-50%);
-    padding: 5px;
-    background-color: #000;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 14px;
-    white-space: nowrap;
-}
-
-#youtube {
-    animation: drop 1s ease-out;
-}
-
-#github {
-    animation: drop 1.25s ease-out;
-}
-
-#instagram {
-    animation: drop 1s ease-out;
-}
-
-
-/* TicTacToe */
-#playground {
-
-    display: none;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-}
-
-#game {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    height: 300px;
-
-}
-
-#board {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 300px;
-}
-
-.row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 300px;
-    height: 100px;
-}
-
-
-.cell {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100px;
-    height: 100px;
-    border: 1px solid var(--feldgrau);
-    font-size: 50px;
-}
-
-.cell * {
-    color: var(--spring-green);
-    font-size: 50px;
-    margin: 0px;
-}
-
-#status {
-    margin-top: 20px;
-    font-size: 20px;
-}
-
-#reset {
-    margin-top: 20px;
-    width: 100px;
-    height: 50px;
-    font-size: 20px;
-}
-
-
-
-button {
-    background-color: var(--black-olive);
-    color: var(--feldgrau-2);
-    padding: 10px 15px;
-    box-shadow: 0px 0px 5px 0px var(--feldgrau-2);
 }
