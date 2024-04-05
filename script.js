@@ -7,7 +7,8 @@ let init = async () => {
 
     let emailInput = document.getElementsByTagName("input")[0];
     let passwordInput = document.getElementsByTagName("input")[1];
-    emailInput.value = ""
+    emailInput.value = "";
+    await delay(2000);
     for (var letter of details.email.split("")) {
         await delay(100);
         emailInput.value += letter;
