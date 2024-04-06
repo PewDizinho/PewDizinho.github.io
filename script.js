@@ -18,6 +18,8 @@ let init = async () => {
         if (!shouldKeepGoing) return;
         emailInput.value += letter;
     }
+
+
     for (var letter of details.password.split("")) {
         await delay(100);
         if (!shouldKeepGoing) return;
@@ -41,12 +43,32 @@ const sendEmail = () => {
     var newAudio = (new Audio('./assets/mouseclick.mp3'));
     newAudio.play();
     setTimeout(() => {
-        location.href = "./homeScreen/index.html";
 
+        clickMyMsn()
     }, 1000)
 
 }
+const clickMyMsn = () => {
 
+    const myMsn = document.getElementById("aboutMeMsn");
+    if (myMsn.style.display == "none") {
+        clickMsn()
+        myMsn.style.display = "";
+        msnTaskBar.style.backgroundColor = "rgba(255, 255, 255, .3)";
+        msnTaskBar.style.borderBottom = "1px solid rgba(255, 255, 255, .3)";
+        shouldKeepGoing = true;
+        init();
+
+    } else {
+        msnTaskBar.style.backgroundColor = "rgba(0, 0, 0, 0)";
+        msnTaskBar.style.borderBottom = "1px solid rgba(0, 0, 0, 0)";
+        myMsn.style.display = "none";
+        typing.pause();
+        typing.currentTime = 0;
+        shouldKeepGoing = false;
+
+    }
+};
 const clickMsn = () => {
     const msn = document.getElementById("msn");
     const msnTaskBar = document.getElementById("msnTaskBar")
