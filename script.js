@@ -20,6 +20,10 @@ let init = async () => {
     audio.pause();
     audio.currentTime = 0;
     await delay(5000);
+    // var newAudio = (new Audio('./assets/mouseclick.mp3'));
+    // newAudio.play();
+    console.log("platyed")
+    // await delay(1000)
     sendEmail();
 };
 const delay = ms => new Promise(res => setTimeout(res, ms));
@@ -28,9 +32,14 @@ const changeIt = () => {
     document.getElementById("mainPage").style.display = "";
     var audio = new Audio('./assets/startup.mp3');
     audio.play();
-
     init();
 }
 const sendEmail = () => {
-    location.href = "./homeScreen/index.html";
+    var newAudio = (new Audio('./assets/mouseclick.mp3'));
+    newAudio.play();
+    setTimeout(() => {
+        location.href = "./homeScreen/index.html";
+
+    }, 1000)
+
 }
