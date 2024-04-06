@@ -259,7 +259,9 @@ div#task-bar {
     overflow-y: scroll;
     overflow-wrap: break-word;
 }
-
+div#aboutMeMsn{
+    margin-bottom: 30px;
+}
 canvas#line {
     width: 100%;
     height: 1px;
