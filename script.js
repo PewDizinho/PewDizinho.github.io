@@ -52,21 +52,17 @@ const clickMyMsn = () => {
 
     const myMsn = document.getElementById("aboutMeMsn");
     if (myMsn.style.display == "none") {
-        clickMsn()
         myMsn.style.display = "";
         msnTaskBar.style.backgroundColor = "rgba(255, 255, 255, .3)";
         msnTaskBar.style.borderBottom = "1px solid rgba(255, 255, 255, .3)";
-        shouldKeepGoing = true;
+        clickMsn()
         init();
-
     } else {
         msnTaskBar.style.backgroundColor = "rgba(0, 0, 0, 0)";
         msnTaskBar.style.borderBottom = "1px solid rgba(0, 0, 0, 0)";
         myMsn.style.display = "none";
         typing.pause();
         typing.currentTime = 0;
-        shouldKeepGoing = false;
-
     }
 };
 const clickMsn = () => {
