@@ -10,7 +10,7 @@ let init = async () => {
     emailInput.value = "";
     passwordInput.value = "";
     if (!shouldKeepGoing) return;
-    await delay(5500);
+    await delay(3000);
     if (!shouldKeepGoing) return;
     typing.play();
     for (var letter of details.email.split("")) {
@@ -18,13 +18,12 @@ let init = async () => {
         if (!shouldKeepGoing) return;
         emailInput.value += letter;
     }
-
-
     for (var letter of details.password.split("")) {
         await delay(100);
         if (!shouldKeepGoing) return;
         passwordInput.value += letter;
     }
+    if (!shouldKeepGoing) return;
     typing.pause();
     typing.currentTime = 0;
     await delay(5000);
@@ -47,7 +46,7 @@ const sendEmail = () => {
         clickMyMsn()
     }, 1000)
 
-}
+};
 const clickMyMsn = () => {
 
     const myMsn = document.getElementById("aboutMeMsn");
@@ -55,7 +54,7 @@ const clickMyMsn = () => {
         myMsn.style.display = "";
         msnTaskBar.style.backgroundColor = "rgba(255, 255, 255, .3)";
         msnTaskBar.style.borderBottom = "1px solid rgba(255, 255, 255, .3)";
-        clickMsn()
+        clickMsn();
         init();
     } else {
         msnTaskBar.style.backgroundColor = "rgba(0, 0, 0, 0)";
@@ -87,6 +86,25 @@ const clickMsn = () => {
             shouldKeepGoing = false;
 
         }
-    }, 200); //TODO: Diminuir o tamanho do audio de click
+    }, 100); //TODO: Diminuir o tamanho do audio de click
 
+};
+
+const openIe = () => {
+    const ie = document.getElementById("iexplorer-wiki");
+    var newAudio = (new Audio('./assets/mouseclick.mp3'));
+    newAudio.play();
+    if (ie.style.display == "none") {
+        ie.style.display = "";
+
+    } else {
+
+        ie.style.display = "none";
+    }
 }
+const closeTab = (tabId) => {
+    const tab = document.getElementById(tabId);
+    tab.style.display = "none";
+    var newAudio = (new Audio('./assets/mouseclick.mp3'));
+    newAudio.play();
+};

@@ -21,7 +21,7 @@ main {
 
 body {
     overflow: hidden;
-
+    cursor: url('./assets/cursors/arrow.cur'), auto;
 }
 
 p,
@@ -52,7 +52,8 @@ div#lockScreen {
 
 img#lockScreenPicture {
     height: 200px;
-    cursor: pointer;
+    cursor: url("./assets//cursors//link.cur"), pointer;
+
 }
 
 #row {
@@ -78,7 +79,7 @@ p#forgotPassword {
     color: #5077CB;
     margin-left: 10px;
     font-weight: 600;
-    cursor: pointer;
+    cursor: url("./assets//cursors//link.cur"), pointer;
     font-size: 15px;
 }
 
@@ -148,7 +149,7 @@ div#task-bar {
     background-image: url("./assets/start-button.png");
     background-repeat: no-repeat;
     background-size: 100%;
-    cursor: pointer;
+    cursor: url("./assets//cursors//link.cur"), pointer;
 }
 
 #pined-items {
@@ -238,12 +239,12 @@ div#task-bar {
     text-align: center;
     text-shadow: 0 2px 2px #000;
     text-overflow: clip;
-    cursor: pointer;
+    cursor: url("./assets//cursors//link.cur"), pointer;
 }
 
 #pined-items>.msnTaskBar {
     background-image: url("./assets/msnLogo.png");
-    cursor: pointer;
+    cursor: url("./assets//cursors//link.cur"), pointer;
 
 }
 
@@ -259,12 +260,104 @@ div#task-bar {
     overflow-y: scroll;
     overflow-wrap: break-word;
 }
-div#aboutMeMsn{
+
+div#aboutMeMsn {
     margin-bottom: 30px;
 }
+
 canvas#line {
     width: 100%;
     height: 1px;
     background-color: rgba(0, 0, 0, 0.267);
-    margin: 10px 0px;
+}
+
+img#window-icon {
+    height: 17px;
+    margin: 0px 5px;
+}
+
+div.title-bar-title {
+    margin: auto;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+div.fullscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 94.4%;
+    width: 100%;
+}
+
+img.icon {
+    height: 30px;
+    margin: 5px;
+}
+
+img#goFoward {
+    rotate: 180deg;
+}
+
+div.url {
+    width: 70%;
+}
+
+input.url {
+    width: 100%;
+}
+
+img#wikiLogo {
+    height: 100px;
+}
+
+
+
+ul#navBarWikipedia {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    max-width: 20%;
+    margin-left: 10px
+}
+
+a {
+    cursor: url("./assets//cursors//link.cur"), pointer;
+}
+
+div#article {
+    max-width: 100%;
+    height: 100%;
+    padding: 10px;
+    width: 80%;
+}
+
+aside {
+    padding: 5px 30px;
+    border: #000 solid 1px;
+    justify-content: center;
+}
+
+img#pfpWiki {
+    height: 300px;
+    display: flex;
+    margin: 0px auto;
+    cursor: url("./assets//cursors//link.cur"), pointer;
+}
+
+aside>p {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+div#article>p {
+    font-size: 15px;
+    margin-top: 0px;
+}
+
+button {
+    cursor: url("./assets//cursors//link.cur"), pointer;
 }
