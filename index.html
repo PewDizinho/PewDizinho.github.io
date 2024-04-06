@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body onload="init()">
-    <video id="video" src="./assets/typing.mp3" autoplay></video>
-    <main>
+<body>
+    <main id="mainPage" style="display: none;">
+        <!-- <video id="video" src="./assets/typing.mp3" autoplay></video> -->
         <div class="window active">
             <div class="title-bar">
                 <div class="title-bar-text">Windows Live Message</div>
@@ -52,6 +52,13 @@
 
     </main>
 
+    <div id="lockScreen" onclick="changeIt()">
+        <div style="margin:auto; display:flex; flex-direction:column; justify-content: center; align-items: center;">
+
+            <img src="./assets/lockScreenIcon.png" id="lockScreenPicture" alt="">
+            <h1 style="color: white;font-size:large; font-weight: 300;">Paulo Eduardo Konopka</h1>
+        </div>
+    </div>
 </body>
 
 </html>
