@@ -219,7 +219,8 @@ div#task-bar {
     background-color: rgba(255, 255, 255, 0);
     border-color: rgba(255, 255, 255, 0);
     padding: 10px;
-
+    justify-content: center;
+    align-items: center;
     left: 10px;
 }
 
@@ -248,7 +249,13 @@ div#task-bar {
 
 }
 
-#pined-items>.msnTaskBar:hover {
+#pined-items>.ieTaskBar {
+    background-image: url("./assets/internetExplorer.png");
+    cursor: url("./assets//cursors//link.cur"), pointer;
+
+}
+
+#pined-items>:hover {
     background-color: rgba(255, 255, 255, .3);
     border-color: rgba(255, 255, 255, .3);
 }
@@ -360,4 +367,9 @@ div#article>p {
 
 button {
     cursor: url("./assets//cursors//link.cur"), pointer;
+}
+
+div#creditosTexto>p {
+    margin: 0px;
+    font-size: 15px;
 }

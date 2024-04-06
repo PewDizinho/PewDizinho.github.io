@@ -12,17 +12,21 @@
 </head>
 
 <body>
-    <main id="mainPage">
+    <main id="mainPage" style="display: none;">
         <div id="icon" style="top: 10px;"><img src="./assets/trash.png" alt="" srcset="">
             <p>Lixeira</p>
         </div>
-        <div onclick="openIe()" id="icon" style="top: 130px;"><img src="./assets/internetExplorer.png" alt=""
-                srcset="">
+        <div onclick="openIe()" id="icon" style="top: 130px;"><img src="./assets/internetExplorer.png" alt="" srcset="">
             <p>Internet<br> Explorer</p>
         </div>
 
-        <div onclick="clickMsn()" id="icon" style="top: 270px;"><img src="./assets/msnLogo.png" alt="" srcset="">
+        <div onclick="clickMsn()" id="icon" style="top: 270px;">
+            <img src="./assets/msnLogo.png" alt="" srcset="">
             <p>MSN</p>
+        </div>
+        <div onclick="clickText()" id="icon" style="top: 400px;">
+            <img src="./assets/blocoDeNotas.png" style="margin: auto; display: flex;" alt="" srcset="">
+            <p style="text-align: center; font-size: 17px ;">Créditos.txt</p>
         </div>
 
         <div class="window active" id="msn" style="display: none;">
@@ -65,7 +69,8 @@
             <div class="title-bar">
                 <div id="row">
                     <div class="title-bar-text"><img src="./assets/internetExplorer.png" alt="icon" id="window-icon"
-                            srcset=""></div>
+                            srcset="">
+                    </div>
                     <div class="title-bar-text title-bar-title">Internet Explorer</div>
                 </div>
                 <div class="title-bar-controls">
@@ -176,11 +181,108 @@
         </div>
 
 
+        <div class="window active" id="text-block" style="display: none;">
+            <div class="title-bar">
+                <div id="row">
+                    <div class="title-bar-text"><img src="./assets/blocoDeNotas.png" alt="icon" id="window-icon"
+                            srcset="">
+                    </div>
+                    <div class="title-bar-text title-bar-title">Créditos - Bloco de Notas</div>
+                </div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button onclick="closeTab('text-block')" aria-label="Close"></button>
+                </div>
+            </div>
+            <ul role="menubar">
+                <ul role="menubar" class="can-hover">
+                    <li role="menuitem" tabindex="0" aria-haspopup="true">
+                        File
+                        <ul role="menu">
+                            <li role="menuitem">
+                                <a href="#menubar">
+                                    Open <span>Ctrl+O</span>
+                                </a>
+                            </li>
+                            <li role="menuitem">
+                                <a href="#menubar">
+                                    Save <span>Ctrl+S</span>
+                                </a>
+                            </li>
+                            <li role="menuitem" class="has-divider">
+                                <a href="#menubar">
+                                    Save As... <span>Ctrl+Shift+S</span>
+                                </a>
+                            </li>
+                            <li role="menuitem"><a href="#menubar">Exit</a></li>
+                        </ul>
+                    </li>
+                    <li role="menuitem" tabindex="0" aria-haspopup="true">
+                        Edit
+                        <ul role="menu">
+                            <li role="menuitem"><a href="#menubar">Undo</a></li>
+                            <li role="menuitem"><a href="#menubar">Copy</a></li>
+                            <li role="menuitem"><a href="#menubar">Cut</a></li>
+                            <li role="menuitem" class="has-divider"><a href="#menubar">Paste</a></li>
+                            <li role="menuitem"><a href="#menubar">Delete</a></li>
+                            <li role="menuitem"><a href="#menubar">Find...</a></li>
+                            <li role="menuitem"><a href="#menubar">Replace...</a></li>
+                            <li role="menuitem"><a href="#menubar">Go to...</a></li>
+                        </ul>
+                    </li>
+                    <li role="menuitem" tabindex="0" aria-haspopup="true">
+                        View
+                        <ul role="menu">
+                            <li role="menuitem" tabindex="0" aria-haspopup="true">
+                                Zoom
+                                <ul role="menu">
+                                    <li role="menuitem"><button>Zoom In</button></li>
+                                    <li role="menuitem"><button>Zoom Out</button></li>
+                                </ul>
+                            </li>
+                            <li role="menuitem"><a href="#menubar">Status Bar</a></li>
+                        </ul>
+                    </li>
+                    <li role="menuitem" tabindex="0" aria-haspopup="true">
+                        Help
+                        <ul role="menu">
+                            <li role="menuitem"><a href="#menubar">View Help</a></li>
+                            <li role="menuitem"><a href="#menubar">About</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </ul>
+            <div class="window-body has-space" id="creditosTexto">
+                <p>!Não esquecer de colocar os créditos!</p>
+                <br>
+                <p>Paulo Eduardo Konopka - Desenvolvimento</p>
+                <p>Paulo Eduardo Konopka - Processo Criativo</p>
+                <p>Paulo Eduardo Konopka - Efeitos Sonoros</p>
+                <p>Paulo Eduardo Konopka - Design</p>
+                <br>
+                <p>-> Menções Honrosas</p>
+                <p>Agradeço a todos nessa lista pela direta ou indireta na criação desse projeto</p>
+                <br>
+                <p>Microsoft INC - Inspiração</p>
+                <p>Khang (7.css) - Windows 7 Framework</p>
+                <p>Queen - Músiconas</p>
+                <p>Allan Turing - Pai da computação</p>
+                <p>Rexona - Nunca me abandonou</p>
+
+
+
+
+            </div>
+        </div>
+
+
 
         <div id="task-bar">
             <div id="blur-overlay"></div>
             <div id="menu-button"></div>
-            <div id="pined-items">
+            <div id="pined-items" style="display: flex;">
+                <div onclick="openIe()" id="ieTaskBar" class="pined-icon ieTaskBar"></div>
                 <div onclick="clickMsn()" id="msnTaskBar" class="pined-icon msnTaskBar"></div>
             </div>
             <div id="datetime">
@@ -188,9 +290,10 @@
                 <span class="date">08/04/2021</span>
             </div>
             <div id="show-desktop"></div>
+        </div>
     </main>
 
-    <div id="lockScreen" style="display:none">
+    <div id="lockScreen">
         <div style="margin:auto; display:flex; flex-direction:column; justify-content: center; align-items: center;">
             <img onclick="changeIt()" src="./assets/lockScreenIcon.png" id="lockScreenPicture" alt="">
             <h1 style="color: white;font-size:large; font-weight: 300;">Paulo Eduardo Konopka</h1>

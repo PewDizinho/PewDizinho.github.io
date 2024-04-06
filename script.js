@@ -91,20 +91,32 @@ const clickMsn = () => {
 };
 
 const openIe = () => {
+    const ieTaskBar = document.getElementById("ieTaskBar")
     const ie = document.getElementById("iexplorer-wiki");
     var newAudio = (new Audio('./assets/mouseclick.mp3'));
     newAudio.play();
     if (ie.style.display == "none") {
         ie.style.display = "";
-
+        ieTaskBar.style.backgroundColor = "rgba(255, 255, 255, .3)";
+        ieTaskBar.style.borderBottom = "1px solid rgba(255, 255, 255, .3)";
     } else {
-
+        ieTaskBar.style.backgroundColor = "rgba(0, 0, 0, 0)";
+        ieTaskBar.style.borderBottom = "1px solid rgba(0, 0, 0, 0)";
         ie.style.display = "none";
     }
 }
 const closeTab = (tabId) => {
+
     const tab = document.getElementById(tabId);
     tab.style.display = "none";
     var newAudio = (new Audio('./assets/mouseclick.mp3'));
     newAudio.play();
+    document.getElementById("ieTaskBar").style.backgroundColor = "rgba(0, 0, 0, 0)";
+    document.getElementById("ieTaskBar").style.borderBottom = "1px solid rgba(0, 0, 0, 0)";
 };
+
+const clickText = () => {
+    var newAudio = (new Audio('./assets/mouseclick.mp3'));
+    newAudio.play();
+    document.getElementById("text-block").style.display = "";
+}
