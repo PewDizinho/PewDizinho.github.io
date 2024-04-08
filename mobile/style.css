@@ -32,11 +32,6 @@ body {
     justify-content: space-between;
 }
 
-img {
-    width: 50%;
-    height: 50%;
-    object-fit: scale-down;
-}
 
 p {
     color: white;
@@ -52,4 +47,16 @@ p#time {
 
 .cell:hover {
     background-color: #02c202;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+    object-fit: scale-down;
+}
+
+img#pfp {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
 }
