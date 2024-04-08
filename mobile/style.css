@@ -1,0 +1,55 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #000000;
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    margin-top: 0px;
+}
+
+
+
+.cell {
+    display: flex;
+    flex-direction: column;
+    position: inherit;
+    background-color: #019501;
+    height: 15vh;
+    width: 50vw;
+    align-items: center;
+    margin: 5px;
+    padding: 15px 5px 5px 5px;
+    justify-content: space-between;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+    object-fit: scale-down;
+}
+
+p {
+    color: white;
+    font-size: 34px;
+    text-align: start;
+}
+
+p#time {
+    font-size: 60px;
+    font-weight: 100;
+
+}
+
+.cell:hover {
+    background-color: #02c202;
+}

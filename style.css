@@ -222,6 +222,7 @@ div#task-bar {
     justify-content: center;
     align-items: center;
     left: 10px;
+    cursor: url("./assets//cursors//link.cur"), pointer;
 }
 
 #icon:hover {
@@ -300,6 +301,10 @@ div.fullscreen {
 img.icon {
     height: 30px;
     margin: 5px;
+}
+
+.icon {
+    cursor: url("./assets//cursors//link.cur"), pointer;
 }
 
 img#goFoward {
