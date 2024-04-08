@@ -1,0 +1,19 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #000000;
+    height: 100%;
+    width: 100%;
+    margin: 4%;
+}
+
+
+.cell {
+    background-color: #019501;
+    height: 95vh;
+    width: 92%;
+}
+
