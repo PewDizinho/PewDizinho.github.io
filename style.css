@@ -349,6 +349,7 @@ div#article {
 aside {
     padding: 5px 30px;
     border: #000 solid 1px;
+    height: fit-content;
     justify-content: center;
 }
 
@@ -377,4 +378,24 @@ button {
 div#creditosTexto>p {
     margin: 0px;
     font-size: 15px;
+}
+
+
+
+
+p#ativarWin {
+    position: absolute;
+    bottom: 80px;
+    right: 30px;
+    margin: 0px;
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.609);
+    font-weight: 100;
+    margin: 0px;
+    z-index: 999;
+}
+
+span {
+
+    font-size: 20px;
 }
