@@ -13,19 +13,7 @@ body {
 
 .cell {
     background-color: #019501;
-    height: fit-content;
+    height: 95vh;
     width: 92%;
 }
 
-
-h1 {
-    color: white;
-    text-align: center;
-}
-
-p {
-    color: white;
-    font-size: 20px;
-    margin: 10px 5px;
-    text-align: start;
-}
