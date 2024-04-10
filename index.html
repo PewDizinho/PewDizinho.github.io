@@ -17,22 +17,23 @@
 
 <body>
     <main id="mainPage" style="display: none;">
-        <div id="icon" style="top: 10px;"><img src="./assets/trash.png" alt="" srcset="">
+        <div class="icon" id="trashIcon" style="top: 10px;"><img src="./assets/trash.png" alt="" srcset="">
             <p>Lixeira</p>
         </div>
-        <div onclick="openIe()" id="icon" style="top: 130px;"><img src="./assets/internetExplorer.png" alt="" srcset="">
+        <div onclick="openIe()" class="icon" id="edgeIcon" style="top: 130px;"><img src="./assets/internetExplorer.png"
+                alt="" srcset="">
             <p>Internet<br> Explorer</p>
         </div>
 
-        <div onclick="clickMsn()" id="icon" style="top: 270px;">
+        <div onclick="clickMsn()" class="icon" style="top: 270px;">
             <img src="./assets/msnLogo.png" alt="" srcset="">
             <p>MSN</p>
         </div>
-        <div onclick="clickText()" id="icon" style="top: 400px;">
+
+        <div onclick="clickText()" class="icon" style="top: 400px;">
             <img src="./assets/blocoDeNotas.png" style="margin: auto; display: flex;" alt="" srcset="">
             <p style="text-align: center; font-size: 17px ;">Créditos.txt</p>
         </div>
-
         <div class="window active" id="msn" style="display: none;">
             <div class="title-bar">
                 <div class="title-bar-text">Windows Live Message</div>
@@ -66,8 +67,46 @@
             </div>
         </div>
 
+        <div class="window active" id="msnOpen" style="display: none;">
+            <div class="title-bar">
+                <div class="title-bar-text">Windows Live Message</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button onclick="closeTab('msnOpen')" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body has-space" style="display: flex; flex-direction: row;">
+                <div id="header">
+                    <img src="./assets/paulo.JPG" alt="Paulo_Eduardo_Konopka" id="pfp-msn" srcset="">
+                    <p>Paulo Eduardo Konopka</p>
+                    <p>Redes Sociais</p>
+                </div>
+
+                <div class="column">
+                    <div id="redes">
+                        <img src="./assets/github.png" alt="" srcset="">
+                        <p>github</p>
+                    </div>
+                    <div id="redes">
+                        <img src="./assets/github.png" alt="" srcset="">
+                        <p>github</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div id="redes">
+                        <img src="./assets/github.png" alt="" srcset="">
+                        <p>github</p>
+                    </div>
+                    <div id="redes">
+                        <img src="./assets/github.png" alt="" srcset="">
+                        <p>github</p>
+                    </div>
+                </div>
 
 
+            </div>
+        </div>
 
         <div class="window active fullscreen has-scrollbar" id="iexplorer-wiki" style="display: none;">
             <div class="title-bar">
@@ -182,8 +221,6 @@
                 </div>
             </div>
         </div>
-
-
         <div class="window active" id="text-block" style="display: none;">
             <div class="title-bar">
                 <div id="row">
@@ -278,9 +315,6 @@
 
             </div>
         </div>
-
-
-
         <div id="task-bar">
             <div id="blur-overlay"></div>
             <div id="menu-button"></div>
@@ -294,16 +328,19 @@
             </div>
             <div id="show-desktop"></div>
         </div>
-
         <p id="ativarWin">Ativar o Windows<br><span>Esse projeto ainda está em construção</span></p>
     </main>
-
     <div id="lockScreen">
         <div style="margin:auto; display:flex; flex-direction:column; justify-content: center; align-items: center;">
             <img onclick="changeIt()" src="./assets/lockScreenIcon.png" id="lockScreenPicture" alt="">
             <h1 style="color: white;font-size:large; font-weight: 300;">Paulo Eduardo Konopka</h1>
         </div>
     </div>
+
+    <div id="cursor" style="display: none;">
+        <img src="./assets/cursors/arrow.cur" id="cursor-img" alt="cursor" srcset="">
+    </div>
+
 </body>
 
 </html>

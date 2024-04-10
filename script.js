@@ -36,6 +36,7 @@ const changeIt = () => {
     document.getElementById("mainPage").style.display = "";
     var audio = new Audio('./assets/startup.mp3');
     audio.play();
+    mouseAnimation();
 
 }
 const sendEmail = () => {
@@ -120,3 +121,35 @@ const clickText = () => {
     newAudio.play();
     document.getElementById("text-block").style.display = "";
 }
+
+const mouseAnimation = () => {
+    const mouse = document.getElementById("cursor");
+    mouse.style.display = "";
+
+    document.getElementsByTagName("body")[0].style.cursor = 'url(".//assets//cursor-inv.png"), auto';
+
+
+    setTimeout(() => {
+        mouse.style.animation = 'goToEdge 2.5s infinite linear';
+        setTimeout(() => {
+            document.getElementById('edgeIcon').classList.add('iconHover');
+
+            document.getElementById("cursor-img").setAttribute("src", "./assets/cursors/link.cur");
+            mouse.style.animation = 'none';
+            mouse.style.left = "45px";
+            mouse.style.top = "165px";
+
+            setTimeout(() => {
+                document.getElementById('edgeIcon').classList.remove('iconHover');
+
+                openIe();
+                mouse.style.display = "none";
+                document.getElementsByTagName("body")[0].style.cursor = 'url("./assets//cursors//arrow.cur"), auto';
+            }, 2000);
+
+        }, 2500);
+    }, 1000);
+
+
+
+};

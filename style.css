@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 main {
     display: flex;
     margin: auto;
@@ -19,10 +23,6 @@ main {
 
 }
 
-body {
-    overflow: hidden;
-    cursor: url('./assets/cursors/arrow.cur'), auto;
-}
 
 p,
 h1,
@@ -88,6 +88,10 @@ input {
     width: 250px;
     margin-left: 25px;
 
+}
+
+div.title-bar {
+    user-select: none;
 }
 
 div#task-bar {
@@ -179,6 +183,7 @@ div#task-bar {
     right: 30px;
     z-index: 3;
     text-align: center;
+    user-select: none;
 
 }
 
@@ -187,6 +192,7 @@ div#task-bar {
     margin: 0;
     font-size: 9pt;
     color: #fff;
+    user-select: none;
 }
 
 #show-desktop {
@@ -214,7 +220,7 @@ div#task-bar {
 }
 
 
-#icon {
+.icon {
     position: absolute;
     background-color: rgba(255, 255, 255, 0);
     border-color: rgba(255, 255, 255, 0);
@@ -222,25 +228,33 @@ div#task-bar {
     justify-content: center;
     align-items: center;
     left: 10px;
+    user-select: none;
     cursor: url("./assets//cursors//link.cur"), pointer;
 }
 
-#icon:hover {
+.icon:hover {
     background-color: rgba(255, 255, 255, .3);
     border-color: rgba(255, 255, 255, .3);
 }
 
-#icon img {
-    height: 60px;
+.iconHover {
+    background-color: rgba(255, 255, 255, .3);
+    border-color: rgba(255, 255, 255, .3);
 }
 
-#icon p {
+.icon img {
+    height: 60px;
+    user-select: none;
+}
+
+.icon p {
     color: white;
     font-size: 20px;
     margin: 0;
     text-align: center;
     text-shadow: 0 2px 2px #000;
     text-overflow: clip;
+    user-select: none;
     cursor: url("./assets//cursors//link.cur"), pointer;
 }
 
@@ -381,9 +395,79 @@ div#creditosTexto>p {
 }
 
 
+img#pfp-msn {
+    height: 150px;
+    border-radius: 50px;
+}
+
+img {
+    user-select: none;
+}
+
+div#redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: rgb(107, 255, 93);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    cursor: url("./assets//cursors//link.cur"), pointer;
+}
+
+div#redes>img {
+    height: 100px;
+}
+
+div#redes>p {
+    font-size: 15px;
+}
+
+div#cursor {
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 99999;
+}
+
+
+
+
+
+
+
+@keyframes goToEdge {
+    0% {
+        left: 50%;
+        top: 50%;
+    }
+
+    100% {
+        left: 45px;
+        top: 165px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 p#ativarWin {
+    user-select: none;
     position: absolute;
     bottom: 80px;
     right: 30px;
@@ -397,6 +481,5 @@ p#ativarWin {
 }
 
 span {
-
     font-size: 20px;
 }
