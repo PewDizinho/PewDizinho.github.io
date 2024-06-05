@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PewDizinho</title>
-    <script src="./script.js"></script>
+    <!-- <script src="./script.js"></script> -->
     <link rel="stylesheet" href="https://unpkg.com/7.css">
     <link rel="icon" type="image/png" href="./assets/internetExplorer.png" />
     <link rel="stylesheet" href="style.css">
@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <main id="mainPage" style="display: none;">
+    <main id="mainPage" style="">
         <div class="icon" id="trashIcon" style="top: 10px;"><img src="./assets/trash.png" alt="" srcset="">
             <p>Lixeira</p>
         </div>
@@ -108,7 +108,7 @@
             </div>
         </div>
 
-        <div class="window active fullscreen has-scrollbar" id="iexplorer-wiki" style="display: none;">
+        <div class="window active fullscreen has-scrollbar" id="iexplorer-wiki" style="display: ;">
             <div class="title-bar">
                 <div id="row">
                     <div class="title-bar-text"><img src="./assets/internetExplorer.png" alt="icon" id="window-icon"
@@ -127,7 +127,6 @@
                 <img src="./assets/goBack.png" id="goFoward" class="icon" alt="">
 
                 <div class="field-row url">
-
                     <input id="text26" class="url" type="text" value="https://wikipedia.org/wiki/Paulo_Eduardo_Konopka">
                 </div>
                 <img src="./assets/refresh.png" id="goFoward" class="icon" alt="">
@@ -330,11 +329,11 @@
         </div>
         <p id="ativarWin">Ativar o Windows<br><span>Esse projeto ainda está em construção</span></p>
     </main>
-    <div id="lockScreen">
-        <div style="margin:auto; display:flex; flex-direction:column; justify-content: center; align-items: center;">
-            <img onclick="changeIt()" src="./assets/lockScreenIcon.png" id="lockScreenPicture" alt="">
-            <h1 style="color: white;font-size:large; font-weight: 300;">Paulo Eduardo Konopka</h1>
-        </div>
+    <div id="lockScreen" style="display: none;>
+        <div style=" margin:auto; display:flex; flex-direction:column; justify-content: center; align-items: center;">
+        <img onclick="changeIt()" src="./assets/lockScreenIcon.png" id="lockScreenPicture" alt="">
+        <h1 style="color: white;font-size:large; font-weight: 300;">Paulo Eduardo Konopka</h1>
+    </div>
     </div>
 
     <div id="cursor" style="display: none;">
