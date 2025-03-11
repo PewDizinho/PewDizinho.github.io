@@ -367,6 +367,7 @@ aside {
     border: #000 solid 1px;
     height: fit-content;
     justify-content: center;
+    position: sticky;
 }
 
 img#pfpWiki {
@@ -436,12 +437,6 @@ div#cursor {
     z-index: 99999;
 }
 
-
-
-
-
-
-
 @keyframes goToEdge {
     0% {
         left: 50%;
@@ -457,12 +452,15 @@ div#cursor {
 
 .card {
     border: 1px solid grey;
-    border-radius: 3px;
     width: fit-content;
     padding: 10px;
-
+    max-width: 80%;
+    margin-bottom: 20px;
 }
 
+div.card h3,h5 {
+    margin: 0px;
+}
 
 
 
