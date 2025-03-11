@@ -36,7 +36,7 @@ const changeIt = () => {
     document.getElementById("mainPage").style.display = "";
     var audio = new Audio('./assets/startup.mp3');
     audio.play();
-    mouseAnimation();
+    //mouseAnimation();
 
 }
 const sendEmail = () => {
@@ -153,3 +153,12 @@ const mouseAnimation = () => {
 
 
 };
+
+const changeWiki = (title) => {
+    const validTitles = ['Sobre', 'Carreira', 'Projetos'];
+    if(validTitles.indexOf(title) == -1) return;
+    for(let titles of validTitles){
+        document.getElementById(titles).style.display = "none";
+    }
+    document.getElementById(title).style.display = "";
+}

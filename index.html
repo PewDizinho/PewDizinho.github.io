@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PewDizinho</title>
-    <script src="./script.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/7.css">
     <link rel="icon" type="image/png" href="./assets/internetExplorer.png" />
     <link rel="stylesheet" href="style.css">
@@ -16,7 +15,7 @@
 </head>
 
 <body>
-    <main id="mainPage" style="display: none;">
+    <main id="mainPage"><!--style="display: none;"-->
         <div class="icon" id="trashIcon" style="top: 10px;   position: absolute;"><img src="./assets/trash.png" alt=""
                 srcset="">
             <p>Lixeira</p>
@@ -49,7 +48,7 @@
                 <p style=" font-size: xx-large; margin: 15px;" class="has-space">Entrar no <br>Windows Live
                     <strong>Messager</strong>
                 </p>
-                <div id="row">
+                <div class="row">
                     <img src="./assets/border.png" alt="login" id="buddyLogin" class="has-space">
                     <div class="field-row column">
                         <input id="text26 email_input" type="email" placeholder="exemplo555@hotmail.com"
@@ -59,7 +58,7 @@
                         <p id="forgotPassword">Esqueceu sua senha?</p>
                         <input type="checkbox" id="example1">
                         <label for="example1" style="margin-left:10px;">Lembrar meu ID e senha</label>
-                        <div id="row" style="margin: 10px 15px">
+                        <div class="row" style="margin: 10px 15px">
                             <button onclick="sendEmail()" style="margin-right: 15px">Entrar</button>
                             <button onclick="clickMsn()">Cancelar</button>
                         </div>
@@ -109,9 +108,9 @@
             </div>
         </div>
 
-        <div class="window active fullscreen has-scrollbar" id="iexplorer-wiki" style="display: none;">
+        <div class="window active fullscreen has-scrollbar" id="iexplorer-wiki"> <!--style="display: none;"-->
             <div class="title-bar">
-                <div id="row">
+                <div class="row">
                     <div class="title-bar-text"><img src="./assets/internetExplorer.png" alt="icon" id="window-icon"
                             srcset="">
                     </div>
@@ -139,7 +138,7 @@
             </ul>
             <div class="window-body has-space has-scrollbar" style="height: 87%; width:97.5%; overflow: auto;">
 
-                <div id="row">
+                <div class="row">
                     <img src="./assets//wikipedia.png" id="wikiLogo" alt="wikiLogo">
                     <div style="margin: 0px;">
                         <p style="font-size: 40px; margin: 0px;font-weight: 700; text-align: center;">Wikipedia</p>
@@ -151,11 +150,11 @@
                 <h1 style="font-size: 40px; font-weight: 600; margin-bottom: 0px;">Paulo Eduardo Konopka</h1>
                 <canvas id="line"></canvas>
                 <ul id="navBarWikipedia">
-                    <a>Sobre</a>
-                    <a>História</a>
-                    <a>Projetos</a>
+                    <a onclick="changeWiki('Sobre')">Sobre</a>
+                    <a onclick="changeWiki('Carreira')">Carreira</a>
+                    <a onclick="changeWiki('Projetos')">Projetos</a>
                 </ul>
-                <div id="row">
+                <div class="row" id="Sobre" style="display: none;">
                     <div id="article">
                         <p>Atuo na área de programação há 6 anos, mesmo antes de iniciar o curso de Análise e
                             Desenvolvimento de
@@ -219,11 +218,43 @@
                     </aside>
 
                 </div>
+                <div id="Carreira" class="row">
+                    <div id="article">
+
+                        <div class="card">
+                            <h2>Assistente Administrativo</h2>
+                            <p>Departamento Penitenciário do Paraná (Deppen)</p>
+
+                        </div>
+                    </div>
+                    <aside>
+                        <p style="font-size: 30px;">Paulo Konopka</p>
+                        <img src=" ./assets/paulo.JPG" id="pfpWiki" alt="">
+                        <p style="text-wrap:nowrap;">Paulo E. Konopka,
+                            15 de março de 2023</p>
+                        <p></p>
+                    </aside>
+
+                </div>
+
+                <div id="Projetos" class="row" style="display: none;">
+                    <div id="article">
+                        <p>Projetos</p>
+                    </div>
+                    <aside>
+                        <p style="font-size: 30px;">Paulo Konopka</p>
+                        <img src=" ./assets/paulo.JPG" id="pfpWiki" alt="">
+                        <p style="text-wrap:nowrap;">Paulo E. Konopka,
+                            15 de março de 2023</p>
+                        <p></p>
+                    </aside>
+
+                </div>
             </div>
         </div>
         <div class="window active" id="text-block" style="display: none;">
             <div class="title-bar">
-                <div id="row">
+                <div class="row">
                     <div class="title-bar-text"><img src="./assets/blocoDeNotas.png" alt="icon" id="window-icon"
                             srcset="">
                     </div>
@@ -330,11 +361,11 @@
         </div>
         <p id="ativarWin">Ativar o Windows<br><span>Esse projeto ainda está em construção</span></p>
     </main>
-    <div id="lockScreen">
+    <div id="lockScreen" style="display: none;">
         <div style=" margin:auto; display:flex; flex-direction:column; justify-content: center; align-items: center;">
-        <img onclick="changeIt()" src="./assets/lockScreenIcon.png" id="lockScreenPicture" alt="">
-        <h1 style="color: white;font-size:large; font-weight: 300;">Paulo Eduardo Konopka</h1>
-    </div>
+            <img onclick="changeIt()" src="./assets/lockScreenIcon.png" id="lockScreenPicture" alt="">
+            <h1 style="color: white;font-size:large; font-weight: 300;">Paulo Eduardo Konopka</h1>
+        </div>
     </div>
 
     <div id="cursor" style="display: none;">
@@ -342,5 +373,6 @@
     </div>
 
 </body>
+<script src="./script.js"></script>
 
 </html>

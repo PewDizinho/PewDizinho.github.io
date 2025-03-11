@@ -56,7 +56,7 @@ img#lockScreenPicture {
 
 }
 
-#row {
+.row {
     display: flex;
 }
 
@@ -455,7 +455,13 @@ div#cursor {
 }
 
 
+.card {
+    border: 1px solid grey;
+    border-radius: 3px;
+    width: fit-content;
+    padding: 10px;
 
+}
 
 
 
