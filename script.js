@@ -36,7 +36,7 @@ const changeIt = () => {
     document.getElementById("mainPage").style.display = "";
     var audio = new Audio('./assets/startup.mp3');
     audio.play();
-    //mouseAnimation();
+    mouseAnimation();
 
 }
 const sendEmail = () => {
@@ -156,23 +156,24 @@ const mouseAnimation = () => {
 
 const changeWiki = (title) => {
     const validTitles = ['Sobre', 'Carreira', 'Projetos'];
-    if(validTitles.indexOf(title) == -1) return;
-    for(let titles of validTitles){
+    if (validTitles.indexOf(title) == -1) return;
+    for (let titles of validTitles) {
         document.getElementById(titles).style.display = "none";
     }
     document.getElementById(title).style.display = "";
+    var newAudio = (new Audio('./assets/mouseclick.mp3'));
+    newAudio.play();
 }
 
 
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
+
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }

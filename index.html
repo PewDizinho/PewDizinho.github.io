@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <main id="mainPage"><!--style="display: none;"-->
+    <main id="mainPage"style="display: none;">
         <div class="icon" id="trashIcon" style="top: 10px;   position: absolute;"><img src="./assets/trash.png" alt=""
                 srcset="">
             <p>Lixeira</p>
@@ -108,7 +108,7 @@
             </div>
         </div>
 
-        <div class="window active fullscreen has-scrollbar" id="iexplorer-wiki"> <!--style="display: none;"-->
+        <div class="window active fullscreen has-scrollbar" id="iexplorer-wiki" style="display: none;"> 
             <div class="title-bar">
                 <div class="row">
                     <div class="title-bar-text"><img src="./assets/internetExplorer.png" alt="icon" id="window-icon"
@@ -154,7 +154,7 @@
                     <a onclick="changeWiki('Carreira')">Carreira</a>
                     <a onclick="changeWiki('Projetos')">Projetos</a>
                 </ul>
-                <div class="row" id="Sobre" style="display: none;">
+                <div class="row" id="Sobre">
                     <div id="article" style="max-width: 80%;">
                         <p>Atuo na área de programação há 6 anos, mesmo antes de iniciar o curso de Análise e
                             Desenvolvimento de
@@ -386,7 +386,7 @@
 
                 </div>
 
-                <div id="Projetos" class="row">
+                <div id="Projetos" class="row" style="display: none;">
                     <div id="article">
                         <div class="card">
                             <h3>Os Kapazes</h3>
@@ -478,27 +478,35 @@
 
                         <div class="card" style="max-width:868px">
                             <h3>Pew's Cavern</h3>
-                            <p>Pew's Cavern foi um projeto pessoal que surgiu como uma forma de monetizar meu hobby durante a
+                            <p>Pew's Cavern foi um projeto pessoal que surgiu como uma forma de monetizar meu hobby
+                                durante a
                                 pandemia. Inicialmente,
-                                comecei criando códigos em JavaScript para o jogo Minecraft, utilizando EcmaScript 5 e NodeJs
+                                comecei criando códigos em JavaScript para o jogo Minecraft, utilizando EcmaScript 5 e
+                                NodeJs
                                 para desenvolver bots de
                                 Discord. Com o tempo, expandi minhas habilidades para outras áreas da programação, como
                                 desenvolvimento web e mobile com
                                 Flutter.<br>
-                        
-                                Nesse período, Pew's Cavern serviu como uma plataforma para organizar meus trabalhos como
+
+                                Nesse período, Pew's Cavern serviu como uma plataforma para organizar meus trabalhos
+                                como
                                 freelancer, incluindo uma loja
-                                virtual onde vendia códigos para Minecraft. Além de aprimorar minhas habilidades técnicas, tive
+                                virtual onde vendia códigos para Minecraft. Além de aprimorar minhas habilidades
+                                técnicas, tive
                                 a oportunidade de
-                                atender clientes de fora do país, o que me ajudou a desenvolver o inglês como uma segunda
+                                atender clientes de fora do país, o que me ajudou a desenvolver o inglês como uma
+                                segunda
                                 língua.<br>
-                        
-                                Essa experiência foi fundamental para meu crescimento profissional, pois me permitiu aplicar
+
+                                Essa experiência foi fundamental para meu crescimento profissional, pois me permitiu
+                                aplicar
                                 meus conhecimentos em
-                                projetos reais, gerenciar meus próprios projetos e prazos, e desenvolver habilidades essenciais
+                                projetos reais, gerenciar meus próprios projetos e prazos, e desenvolver habilidades
+                                essenciais
                                 para o sucesso como
                                 freelancer, como comunicação eficaz com clientes e gestão de tempo.<br></p>
-                            <img src=" ./assets/projetos/PewsCavern.png" id="pewscavern" alt="" style="display: block; margin: 0 auto;">
+                            <img src=" ./assets/projetos/PewsCavern.png" id="pewscavern" alt=""
+                                style="display: block; margin: 0 auto;">
                         </div>
                     </div>
                     <aside>
@@ -511,9 +519,9 @@
 
                 </div>
 
-              
+
             </div>
-         
+
 
         </div>
         </div>
@@ -627,7 +635,7 @@
         </div>
         <p id="ativarWin">Ativar o Windows<br><span>Esse projeto ainda está em construção</span></p>
     </main>
-    <div id="lockScreen" style="display: none;">
+    <div id="lockScreen">
         <div style=" margin:auto; display:flex; flex-direction:column; justify-content: center; align-items: center;">
             <img onclick="changeIt()" src="./assets/lockScreenIcon.png" id="lockScreenPicture" alt="">
             <h1 style="color: white;font-size:large; font-weight: 300;">Paulo Eduardo Konopka</h1>
