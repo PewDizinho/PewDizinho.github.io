@@ -44,7 +44,7 @@
             <div class="window-resizer top-right"></div>
             <div class="window-resizer bottom-left"></div>
             <div class="window-resizer bottom-right"></div>
-            
+
             <div class="title-bar">
                 <div class="title-bar-text">Windows Live Message</div>
                 <div class="title-bar-controls">
@@ -87,7 +87,7 @@
             <div class="window-resizer top-right"></div>
             <div class="window-resizer bottom-left"></div>
             <div class="window-resizer bottom-right"></div>
-            
+
             <div class="title-bar">
                 <div class="title-bar-text">Windows Live Message</div>
                 <div class="title-bar-controls">
@@ -137,9 +137,9 @@
                     <div class="title-bar-text title-bar-title">Internet Explorer</div>
                 </div>
                 <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button onclick="closeTab('iexplorer-wiki')" aria-label="Close"></button>
+                    <button onclick="minimizeWindow('iexplorer-wiki')" aria-label="Minimize">‒</button>
+                    <button onclick="toggleMaximize('iexplorer-wiki')" aria-label="Maximize">□</button>
+                    <button onclick="closeWindow('iexplorer-wiki')" aria-label="Close">✕</button>
                 </div>
             </div>
             <ul role="menubar">
@@ -228,38 +228,44 @@
                             precisamos
                             pensar.”
                         </p>
+
                     </div>
-                           <!-- Profile Infobox -->
-                        <div class="profile-infobox">
-                            <div class="profile-image">
-                                <img src="assets/paulo.JPG" alt="Paulo Eduardo Konopka">
-                                <div class="image-caption">Paulo em 2024</div>
-                            </div>
-                            
-                            <table class="infobox-table">
-                                <tr>
-                                    <td class="infobox-label"><strong>Nome completo</strong></td>
-                                    <td class="infobox-value">Paulo Eduardo Konopka</td>
-                                </tr>
-                                <tr>
-                                    <td class="infobox-label"><strong>Outros nomes</strong></td>
-                                    <td class="infobox-value">PewDizinho</td>
-                                </tr>
-                                <tr>
-                                    <td class="infobox-label"><strong>Nascimento</strong></td>
-                                    <td class="infobox-value"><a href="#">4 de junho de 2004</a> (21 anos)<br>
-                                        <a href="#">Curitiba</a>, <a href="#">Paraná</a>, <a href="#">Brasil</a></td>
-                                </tr>
-                                <tr>
-                                    <td class="infobox-label"><strong>Educação</strong></td>
-                                    <td class="infobox-value"><a href="#">Universidade Tuiuti do Paraná</a> (UTP)</td>
-                                </tr>
-                                <tr>
-                                    <td class="infobox-label"><strong>Ocupação</strong></td>
-                                    <td class="infobox-value">Fundador e Desenvolvedor Principal na <a href="#">Pew's Cavern</a></td>
-                                </tr>
-                            </table>
+                    <!-- Profile Infobox -->
+                    <div class="profile-infobox">
+                        <div class="profile-image">
+                            <img src="assets/paulo.JPG" alt="Paulo Eduardo Konopka">
+                            <div class="image-caption">Paulo em 2024</div>
                         </div>
+
+                        <table class="infobox-table">
+                            <tr>
+                                <td class="infobox-label"><strong>Nome completo</strong></td>
+                                <td class="infobox-value">Paulo Eduardo Konopka</td>
+                            </tr>
+                            <tr>
+                                <td class="infobox-label"><strong>Outros nomes</strong></td>
+                                <td class="infobox-value">PewDizinho</td>
+                            </tr>
+                             <tr>
+                                <td class="infobox-label"><strong>Nascimento</strong></td>
+                                <td class="infobox-value">
+                                    4 de junho de 2004
+                                    <span class="idadeTempoReal" style="font-size: inherit; font-weight: inherit;"></span><br>
+                                    Curitiba, Paraná, Brasil
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="infobox-label"><strong>Educação</strong></td>
+                                <td class="infobox-value"><a href="#">Universidade Tuiuti do Paraná</a> (UTP)</td>
+                            </tr>
+                            <tr>
+                                <td class="infobox-label"><strong>Ocupação</strong></td>
+                                <td class="infobox-value">Fundador e Desenvolvedor Principal na <a href="#">Pew's
+                                        Cavern</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
 
                 </div>
                 <div id="Carreira" class="row" style="display: none;">
@@ -447,13 +453,42 @@
 
                         </div>
                     </div>
-                    <aside>
-                        <p style="font-size: 30px;">Paulo Konopka</p>
-                        <img src=" ./assets/paulo.JPG" id="pfpWiki" alt="">
-                        <p style="text-wrap:nowrap;">Paulo E. Konopka,
-                            15 de março de 2023</p>
-                        <p></p>
-                    </aside>
+                    <!-- Profile Infobox -->
+                    <div class="profile-infobox">
+                        <div class="profile-image">
+                            <img src="assets/paulo.JPG" alt="Paulo Eduardo Konopka">
+                            <div class="image-caption">Paulo em 2024</div>
+                        </div>
+
+                        <table class="infobox-table">
+                            <tr>
+                                <td class="infobox-label"><strong>Nome completo</strong></td>
+                                <td class="infobox-value">Paulo Eduardo Konopka</td>
+                            </tr>
+                            <tr>
+                                <td class="infobox-label"><strong>Outros nomes</strong></td>
+                                <td class="infobox-value">PewDizinho</td>
+                            </tr>
+                            <tr>
+                                <td class="infobox-label"><strong>Nascimento</strong></td>
+                                <td class="infobox-value">
+                                    4 de junho de 2004
+                                    <span class="idadeTempoReal" style="font-size: inherit; font-weight: inherit;"></span><br>
+                                    Curitiba, Paraná, Brasil
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="infobox-label"><strong>Educação</strong></td>
+                                <td class="infobox-value"><a href="#">Universidade Tuiuti do Paraná</a> (UTP)</td>
+                            </tr>
+                            <tr>
+                                <td class="infobox-label"><strong>Ocupação</strong></td>
+                                <td class="infobox-value">Fundador e Desenvolvedor Principal na <a href="#">Pew's
+                                        Cavern</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
 
                 </div>
 
@@ -576,17 +611,45 @@
                                 essenciais
                                 para o sucesso como
                                 freelancer, como comunicação eficaz com clientes e gestão de tempo.<br></p>
-                            <img src=" ./assets/projetos/PewsCavern.png" id="pewscavern" alt=""
+                            <img src="assets/projetos/PewsCavern.png" id="pewscavern" alt=""
                                 style="display: block; margin: 0 auto;">
                         </div>
                     </div>
-                    <aside>
-                        <p style="font-size: 30px;">Paulo Konopka</p>
-                        <img src=" ./assets/paulo.JPG" id="pfpWiki" alt="">
-                        <p style="text-wrap:nowrap;">Paulo E. Konopka,
-                            15 de março de 2023</p>
-                        <p></p>
-                    </aside>
+                    <div class="profile-infobox">
+                        <div class="profile-image">
+                            <img src="assets/paulo.JPG" alt="Paulo Eduardo Konopka">
+                            <div class="image-caption">Paulo em 2024</div>
+                        </div>
+
+                        <table class="infobox-table">
+                            <tr>
+                                <td class="infobox-label"><strong>Nome completo</strong></td>
+                                <td class="infobox-value">Paulo Eduardo Konopka</td>
+                            </tr>
+                            <tr>
+                                <td class="infobox-label"><strong>Outros nomes</strong></td>
+                                <td class="infobox-value">PewDizinho</td>
+                            </tr>
+                            <tr>
+                                <td class="infobox-label"><strong>Nascimento</strong></td>
+                                <td class="infobox-value">
+                                    4 de junho de 2004
+                                    <span class="idadeTempoReal" style="font-size: inherit; font-weight: inherit;"></span><br>
+                                    Curitiba, Paraná, Brasil
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="infobox-label"><strong>Educação</strong></td>
+                                <td class="infobox-value"><a href="#">Universidade Tuiuti do Paraná</a> (UTP)</td>
+                            </tr>
+                            <tr>
+                                <td class="infobox-label"><strong>Ocupação</strong></td>
+                                <td class="infobox-value">Fundador e Desenvolvedor Principal na <a href="#">Pew's
+                                        Cavern</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
 
                 </div>
 
@@ -606,9 +669,9 @@
                     <div class="title-bar-text title-bar-title">Créditos - Bloco de Notas</div>
                 </div>
                 <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button onclick="closeTab('text-block')" aria-label="Close"></button>
+                    <button onclick="minimizeWindow('text-block')" aria-label="Minimize">‒</button>
+                    <button onclick="toggleMaximize('text-block')" aria-label="Maximize">□</button>
+                    <button onclick="closeWindow('text-block')" aria-label="Close">✕</button>
                 </div>
             </div>
             <ul role="menubar">
@@ -719,5 +782,20 @@
 
 </body>
 <script src="./script.js"></script>
+<script>
+    function calcularIdade(nascimento) {
+        const hoje = new Date();
+        const nasc = new Date(nascimento);
+        let idade = hoje.getFullYear() - nasc.getFullYear();
+        const m = hoje.getMonth() - nasc.getMonth();
+        if (m < 0 || (m === 0 && hoje.getDate() < nasc.getDate())) {
+            idade--;
+        }
+        return idade;
+    }
+    document.querySelectorAll('.idadeTempoReal').forEach(el => {
+        el.textContent = calcularIdade('2004-06-04') + ' anos';
+    });
+</script>
 
 </html>
