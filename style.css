@@ -17,9 +17,12 @@ main {
     align-items: center;
     background-image: url('./assets/background.png');
     background-repeat: no-repeat;
+    /* keep the Windows orb centered on all screen sizes */
     background-size: cover;
-    background-position-y: 15%;
+    background-position: center center;
+    background-attachment: fixed;
     font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+
 
 }
 
@@ -34,7 +37,10 @@ h3 {
 div#lockScreen {
     background-image: url('./assets/background-lock.png');
     background-repeat: no-repeat;
+    /* ensure lock screen logo stays centered */
     background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -42,8 +48,7 @@ div#lockScreen {
     min-width: 100vw;
     height: 100%;
     width: 100%;
-    background-position-y: 15%;
-
+    
     display: flex;
     margin: auto;
     bottom: 0;
@@ -484,6 +489,40 @@ ul#navBarWikipedia {
 
 a {
     cursor: url("./assets//cursors//link.cur"), pointer;
+}
+
+/* Wikipedia-like link styles: blue links, purple visited, underline on hover/focus */
+a {
+    cursor: url("./assets//cursors//link.cur"), pointer;
+}
+
+/* Main article links */
+div#article a, ul#navBarWikipedia a {
+    color: #0645ad; /* Wikipedia link blue */
+    text-decoration: none;
+}
+
+div#article a:visited, ul#navBarWikipedia a:visited {
+    color: #0b0080; /* visited purple */
+}
+
+div#article a:hover, div#article a:focus, ul#navBarWikipedia a:hover, ul#navBarWikipedia a:focus {
+    color: #0b0080;
+    text-decoration: underline;
+}
+
+/* active/clicked state */
+div#article a:active {
+    color: #0c3d99;
+}
+
+/* Infobox links use same colors but slightly smaller weight */
+.infobox-value a {
+    color: #0645ad;
+    text-decoration: none;
+}
+.infobox-value a:hover {
+    text-decoration: underline;
 }
 
 div#article {
@@ -1075,4 +1114,8 @@ div.mySlides img {
     text-decoration: none;
     word-break: break-word;
     overflow-wrap: anywhere;
+}
+
+.infobox-value a:hover {
+    text-decoration: underline;
 }
