@@ -35,12 +35,22 @@
             <p style="text-align: center; font-size: 17px ;">Créditos.txt</p>
         </div>
         <div class="window active" id="msn" style="display: none;">
+            <!-- Window Resizers -->
+            <div class="window-resizer top"></div>
+            <div class="window-resizer bottom"></div>
+            <div class="window-resizer left"></div>
+            <div class="window-resizer right"></div>
+            <div class="window-resizer top-left"></div>
+            <div class="window-resizer top-right"></div>
+            <div class="window-resizer bottom-left"></div>
+            <div class="window-resizer bottom-right"></div>
+            
             <div class="title-bar">
                 <div class="title-bar-text">Windows Live Message</div>
                 <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button onclick="clickMsn()" aria-label="Close"></button>
+                    <button onclick="minimizeWindow('msn')" aria-label="Minimize">‒</button>
+                    <button onclick="toggleMaximize('msn')" aria-label="Maximize">□</button>
+                    <button onclick="closeWindow('msn')" aria-label="Close">✕</button>
                 </div>
             </div>
             <div class="window-body has-space"
@@ -68,12 +78,22 @@
         </div>
 
         <div class="window active" id="msnOpen" style="display: none;">
+            <!-- Window Resizers -->
+            <div class="window-resizer top"></div>
+            <div class="window-resizer bottom"></div>
+            <div class="window-resizer left"></div>
+            <div class="window-resizer right"></div>
+            <div class="window-resizer top-left"></div>
+            <div class="window-resizer top-right"></div>
+            <div class="window-resizer bottom-left"></div>
+            <div class="window-resizer bottom-right"></div>
+            
             <div class="title-bar">
                 <div class="title-bar-text">Windows Live Message</div>
                 <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button onclick="closeTab('msnOpen')" aria-label="Close"></button>
+                    <button onclick="minimizeWindow('msnOpen')" aria-label="Minimize">‒</button>
+                    <button onclick="toggleMaximize('msnOpen')" aria-label="Maximize">□</button>
+                    <button onclick="closeWindow('msnOpen')" aria-label="Close">✕</button>
                 </div>
             </div>
             <div class="window-body has-space" style="display: flex; flex-direction: row;">
@@ -209,13 +229,37 @@
                             pensar.”
                         </p>
                     </div>
-                    <aside>
-                        <p style="font-size: 30px;">Paulo Konopka</p>
-                        <img src=" ./assets/paulo.JPG" id="pfpWiki" alt="">
-                        <p style="text-wrap:nowrap;">Paulo E. Konopka,
-                            15 de março de 2023</p>
-                        <p></p>
-                    </aside>
+                           <!-- Profile Infobox -->
+                        <div class="profile-infobox">
+                            <div class="profile-image">
+                                <img src="assets/paulo.JPG" alt="Paulo Eduardo Konopka">
+                                <div class="image-caption">Paulo em 2024</div>
+                            </div>
+                            
+                            <table class="infobox-table">
+                                <tr>
+                                    <td class="infobox-label"><strong>Nome completo</strong></td>
+                                    <td class="infobox-value">Paulo Eduardo Konopka</td>
+                                </tr>
+                                <tr>
+                                    <td class="infobox-label"><strong>Outros nomes</strong></td>
+                                    <td class="infobox-value">PewDizinho</td>
+                                </tr>
+                                <tr>
+                                    <td class="infobox-label"><strong>Nascimento</strong></td>
+                                    <td class="infobox-value"><a href="#">4 de junho de 2004</a> (21 anos)<br>
+                                        <a href="#">Curitiba</a>, <a href="#">Paraná</a>, <a href="#">Brasil</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="infobox-label"><strong>Educação</strong></td>
+                                    <td class="infobox-value"><a href="#">Universidade Tuiuti do Paraná</a> (UTP)</td>
+                                </tr>
+                                <tr>
+                                    <td class="infobox-label"><strong>Ocupação</strong></td>
+                                    <td class="infobox-value">Fundador e Desenvolvedor Principal na <a href="#">Pew's Cavern</a></td>
+                                </tr>
+                            </table>
+                        </div>
 
                 </div>
                 <div id="Carreira" class="row" style="display: none;">

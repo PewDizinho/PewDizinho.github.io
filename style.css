@@ -92,6 +92,7 @@ input {
 
 div.title-bar {
     user-select: none;
+    cursor: move;
 }
 
 div#task-bar {
@@ -306,12 +307,38 @@ div.title-bar-title {
     margin-right: 15px;
 }
 
-div.fullscreen {
+/* Window base styles */
+.window {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 94.4%;
-    width: 100%;
+    z-index: 1000;
+    background: white;
+    border: 1px solid #a0a0a0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    min-width: 400px;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+.window:not(.fullscreen) {
+    width: 500px;
+    height: 400px;
+    top: 100px;
+    left: 100px;
+}
+
+.window.fullscreen {
+    width: 900px;
+    height: 600px;
+    top: 50px;
+    left: 50px;
+}
+
+#iexplorer-wiki.fullscreen {
+    width: 1000px;
+    height: 700px;
+    top: 30px;
+    left: 30px;
 }
 
 img.icon {
@@ -323,10 +350,106 @@ img.icon {
     cursor: url("./assets//cursors//link.cur"), pointer;
 }
 
+/* Internet Explorer Toolbar Styles */
+.ie-toolbar {
+    display: flex !important;
+    align-items: center;
+    padding: 6px 8px;
+    background: linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 100%);
+    border-bottom: 1px solid #a0a0a0;
+    gap: 8px;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 36px;
+}
+
+.ie-toolbar .icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    opacity: 0.8;
+}
+
+.ie-toolbar .icon:hover {
+    opacity: 1;
+}
+
+.url-container {
+    flex: 1;
+    margin: 0 6px;
+    min-width: 150px;
+    max-width: none;
+}
+
+.url-container input.url {
+    width: 100%;
+    padding: 4px 8px;
+    border: 2px inset #f0f0f0;
+    background: white;
+    font-size: 12px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    box-sizing: border-box;
+    height: 22px;
+}
+
+.search-container {
+    width: 140px;
+    margin: 0;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.search-container .search-input {
+    width: 100%;
+    padding: 4px 22px 4px 8px;
+    border: 2px inset #f0f0f0;
+    background: white;
+    font-size: 12px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    box-sizing: border-box;
+    height: 22px;
+}
+
+/* Add search icon inside the input */
+.search-container::after {
+    content: "🔍";
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: #666;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Internet Explorer Content Area */
+.ie-content {
+    height: calc(100% - 80px) !important; /* Adjust for title bar and toolbar */
+    width: 100% !important;
+    overflow: auto;
+    margin: 0;
+    padding: 16px;
+    background: white;
+}
+
+/* Fix window body for IE */
+#iexplorer-wiki .window-body {
+    height: calc(100% - 80px);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+
 img#goFoward {
     rotate: 180deg;
 }
 
+/* Remove old problematic styles */
 div.url {
     width: 70%;
 }
@@ -360,6 +483,9 @@ div#article {
     height: 100%;
     padding: 10px;
     width: 80%;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
 }
 
 aside {
@@ -579,4 +705,352 @@ div.mySlides img {
     to {
         opacity: 1
     }
+}
+
+/* Window Management Styles */
+.window {
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 8px 8px 0 0;
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.window.maximized {
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: calc(100vh - 40px) !important; /* Deixa espaço para a taskbar */
+    border-radius: 0 !important;
+}
+
+.window.minimized {
+    display: none !important;
+    opacity: 0;
+    transform: scale(0.1);
+    pointer-events: none;
+}
+
+.window.focused {
+    z-index: 10000 !important;
+}
+
+.window-resizer {
+    position: absolute;
+    background: transparent;
+    z-index: 10;
+}
+
+.window-resizer:hover {
+    background: rgba(0, 120, 212, 0.1);
+}
+
+.window-resizer.top {
+    top: 0;
+    left: 8px;
+    right: 8px;
+    height: 4px;
+    cursor: ns-resize;
+}
+
+.window-resizer.bottom {
+    bottom: 0;
+    left: 8px;
+    right: 8px;
+    height: 4px;
+    cursor: ns-resize;
+}
+
+.window-resizer.left {
+    top: 8px;
+    bottom: 8px;
+    left: 0;
+    width: 4px;
+    cursor: ew-resize;
+}
+
+.window-resizer.right {
+    top: 8px;
+    bottom: 8px;
+    right: 0;
+    width: 4px;
+    cursor: ew-resize;
+}
+
+.window-resizer.top-left {
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    cursor: nw-resize;
+}
+
+.window-resizer.top-right {
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    cursor: ne-resize;
+}
+
+.window-resizer.bottom-left {
+    bottom: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    cursor: sw-resize;
+}
+
+.window-resizer.bottom-right {
+    bottom: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    cursor: se-resize;
+}
+
+.title-bar-controls button {
+    position: relative;
+}
+
+.title-bar-controls button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.title-bar-controls button:active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Taskbar Updates */
+.taskbar-item {
+    transition: all 0.2s ease;
+}
+
+.taskbar-item.minimized {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.taskbar-item.active {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Enhanced Window Styles */
+.title-bar {
+    background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 50%, #d1d1d1 51%, #fefefe 100%);
+    border-bottom: 1px solid #a0a0a0;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.title-bar-controls {
+    display: flex;
+    gap: 2px;
+}
+
+.title-bar-controls button {
+    width: 21px;
+    height: 21px;
+    border: 1px solid #a0a0a0;
+    background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.title-bar-controls button:hover {
+    background: linear-gradient(to bottom, #e5f3ff 0%, #bddbff 100%);
+}
+
+.title-bar-controls button:active {
+    background: linear-gradient(to bottom, #bddbff 0%, #9ac7ff 100%);
+}
+
+/* Window states enhanced */
+.window.focused {
+    box-shadow: 0 0 0 1px #0078d4, 0 4px 20px rgba(0, 120, 212, 0.3);
+}
+
+.window.focused .title-bar {
+    background: linear-gradient(to bottom, #4a90e2 0%, #357abd 50%, #1e5f99 51%, #4a90e2 100%);
+    color: white;
+}
+
+.window.focused .title-bar-controls button {
+    background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+    color: black;
+}
+
+/* Improve window content area */
+.window-body {
+    padding: 16px;
+    background: #f0f0f0;
+    overflow: auto;
+}
+
+.window-body.has-space {
+    padding: 16px;
+}
+
+/* Smooth animations */
+@keyframes windowOpen {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes windowMinimize {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+}
+
+@keyframes windowClose {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+.window:not(.minimized):not([style*="display: none"]) {
+    animation: windowOpen 0.2s ease-out;
+}
+
+.window.minimizing {
+    animation: windowMinimize 0.2s ease-in;
+}
+
+.window.closing {
+    animation: windowClose 0.2s ease-in;
+}
+
+/* Aero Snap visual feedback */
+.window.snap-preview {
+    background: rgba(0, 120, 212, 0.1) !important;
+    border: 2px solid #0078d4 !important;
+}
+
+/* Enhanced taskbar styling */
+.taskbar-item {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.taskbar-item:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Window focus outline */
+.window.focused {
+    outline: 1px solid #0078d4;
+    outline-offset: -1px;
+}
+
+/* Wikipedia Profile Infobox */
+.profile-infobox {
+    float: right;
+    width: 280px;
+    margin: 0 0 16px 16px;
+    background: #f6f6f6;
+    border: 1px solid #a2a9b1;
+    padding: 0;
+    font-size: 88%;
+    clear: right;
+    shape-outside: margin-box;
+}
+
+/* Ensure text wraps around the infobox properly */
+#article {
+    overflow: visible !important;
+    word-wrap: break-word;
+    line-height: 1.6;
+}
+
+#article p {
+    margin-right: 0;
+    text-align: justify;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.profile-image {
+    text-align: center;
+    padding: 16px 16px 8px;
+}
+
+.profile-image img {
+    max-width: 220px;
+    height: auto;
+    border: 1px solid #a2a9b1;
+}
+
+.image-caption {
+    font-size: 12px;
+    color: #54595d;
+    margin-top: 4px;
+    font-style: italic;
+}
+
+.infobox-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.infobox-table tr {
+    border-top: 1px solid #a2a9b1;
+}
+
+.infobox-table tr:first-child {
+    border-top: none;
+}
+
+.infobox-label {
+    vertical-align: top;
+    text-align: left;
+    padding: 8px;
+    font-weight: bold;
+    width: 35%;
+    background: #eaecf0;
+    border-right: 1px solid #a2a9b1;
+}
+
+.infobox-value {
+    vertical-align: top;
+    text-align: left;
+    padding: 8px;
+    background: #f6f6f6;
+}
+
+.infobox-value a {
+    color: #0645ad;
+    text-decoration: none;
+}
+
+.infobox-value a:hover {
+    text-decoration: underline;
 }
