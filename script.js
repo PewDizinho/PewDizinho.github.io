@@ -480,8 +480,9 @@ let init = async () => {
         email: "pewdizinho@hotmail.com",
         password: "************"
     };
-    let emailInput = document.getElementsByTagName("input")[0];
-    let passwordInput = document.getElementsByTagName("input")[1];
+    // target the specific msn inputs (readonly in HTML)
+    let emailInput = document.getElementById('msn-email');
+    let passwordInput = document.getElementById('msn-password');
     emailInput.value = "";
     passwordInput.value = "";
     if (!shouldKeepGoing) return;
@@ -526,6 +527,7 @@ const clickMyMsn = () => {
     windowManager?.closeWindow('msn');
     setTimeout(() => {
         windowManager?.openWindow('msnOpen');
+        // ensure msnOpen shows the profile info — nothing else required
     }, 100);
 };
 // Keep legacy functions for icon clicks

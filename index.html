@@ -61,10 +61,10 @@
                 <div class="row">
                     <img src="./assets/border.png" alt="login" id="buddyLogin" class="has-space">
                     <div class="field-row column">
-                        <input id="text26 email_input" type="email" placeholder="exemplo555@hotmail.com"
-                            class="has-space" style="margin: 15px 10px 10px;" />
-                        <input id="text26 password_input" type="password" placeholder="Senha" class="has-space"
-                            style="  margin-left: 10px;" />
+                        <input id="msn-email" class="msn-login-input" type="email" placeholder="exemplo555@hotmail.com"
+                            class="has-space" style="margin: 15px 10px 10px;" readonly tabindex="-1" />
+                        <input id="msn-password" class="msn-login-input" type="password" placeholder="Senha" class="has-space"
+                            style="  margin-left: 10px;" readonly tabindex="-1" />
                         <p id="forgotPassword">Esqueceu sua senha?</p>
                         <input type="checkbox" id="example1">
                         <label for="example1" style="margin-left:10px;">Lembrar meu ID e senha</label>
@@ -97,33 +97,24 @@
                 </div>
             </div>
             <div class="window-body has-space" style="display: flex; flex-direction: row;">
-                <div id="header">
-                    <img src="./assets/paulo.JPG" alt="Paulo_Eduardo_Konopka" id="pfp-msn" srcset="">
-                    <p>Paulo Eduardo Konopka</p>
-                    <p>Redes Sociais</p>
-                </div>
-
-                <div class="column">
-                    <div id="redes">
-                        <img src="./assets/github.png" alt="" srcset="">
-                        <p>github</p>
+                <div id="header" style="width:100%;">
+                    <div style="display:flex; align-items:center; gap:14px;">
+                        <img src="./assets/paulo.JPG" alt="Paulo_Eduardo_Konopka" id="pfp-msn" style="height:80px; width:80px; object-fit:cover; border-radius:6px;">
+                        <div style="display:flex; flex-direction:column;">
+                            <p style="font-weight:700; margin:0; font-size:18px;">Paulo Eduardo Konopka</p>
+                            <p style="margin:0; color:green; font-size:12px;">Online</p>
+                        </div>
                     </div>
-                    <div id="redes">
-                        <img src="./assets/github.png" alt="" srcset="">
-                        <p>github</p>
-                    </div>
-                </div>
-                <div class="column">
-                    <div id="redes">
-                        <img src="./assets/github.png" alt="" srcset="">
-                        <p>github</p>
-                    </div>
-                    <div id="redes">
-                        <img src="./assets/github.png" alt="" srcset="">
-                        <p>github</p>
+                    <div class="msn-contacts" style="margin-top:12px;">
+                        <ul style="list-style:none; padding:0; margin:0;">
+                            <li class="msn-contact"><img src="./assets/github.png" class="msn-contact-icon" alt="github"> <a href="https://github.com/PewDizinho" target="_blank" rel="noopener">github.com/PewDizinho</a></li>
+                            <li class="msn-contact"><img src="./assets/mobile/linkedinpng.png" class="msn-contact-icon" alt="linkedin"> <a href="https://linkedin.com/in/PauloKonopka" target="_blank" rel="noopener">linkedin.com/in/PauloKonopka</a></li>
+                            <li class="msn-contact"><img src="./assets/mobile/user.png" class="msn-contact-icon" alt="instagram"> <a href="https://instagram.com/paulo.konopka/" target="_blank" rel="noopener">instagram.com/paulo.konopka/</a></li>
+                            <li class="msn-contact"><img src="./assets/msnLogo.png" class="msn-contact-icon" alt="discord"> Discord: <strong>PewDizinho</strong></li>
+                            <li class="msn-contact"><img src="./assets/projetos/PewsCavern.png" class="msn-contact-icon" alt="steam"> <a href="https://steamcommunity.com/id/PewDizinho" target="_blank" rel="noopener">steamcommunity.com/id/PewDizinho</a></li>
+                        </ul>
                     </div>
                 </div>
-
 
             </div>
         </div>
